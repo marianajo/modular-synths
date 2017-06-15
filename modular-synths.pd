@@ -19,6 +19,7 @@
 #X obj 300 178 outlet~;
 #X connect 0 0 1 0;
 #X restore 46 154 pd efeitos;
+#X text 243 107 Teste github;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
