@@ -26,7 +26,8 @@
 #X obj 136 91 tst~;
 #X obj 249 91 tst~;
 #X floatatom 249 268 5 0 0 0 - - -, f 5;
-#X text 50 101 Teste;
+#X text 50 101 Tst~;
+#X text 56 143 comment;
 #X connect 0 0 3 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 0;
