@@ -19,13 +19,14 @@
 #X obj 300 178 outlet~;
 #X connect 0 0 1 0;
 #X restore 46 154 pd efeitos;
-#N canvas 0 22 450 300 teste-modulo 0;
+#N canvas 0 22 450 300 teste-modulo 1;
 #X floatatom 136 74 5 0 0 0 - - -, f 5;
 #X floatatom 136 268 5 0 0 0 - - -, f 5;
 #X floatatom 249 74 5 0 0 0 - - -, f 5;
 #X obj 136 91 tst~;
 #X obj 249 91 tst~;
 #X floatatom 249 268 5 0 0 0 - - -, f 5;
+#X text 50 101 comment;
 #X connect 0 0 3 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 0;
