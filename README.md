@@ -10,24 +10,24 @@ Professor: Marcelo Queiroz
 The synthesizer uses four modules: control, synthesis, effects and envelopes.
 
 ### Control
-* MIDI file reader
-* Theremin Canvas
+* MIDI file reader [marianajo] -not_done
+* Theremin Canvas [itaborala] -not_done
 
 ### Synthesis
-* VCO
-* Wavelets
-* FM
-* Closed-form summation formulas
+* VCO [itaborala] -not_done
+* Wavelets [itaborala] -not_done
+* FM [marianajo] -not_done
+* Closed-form summation formulas [marianajo] -not_done
 
 ### Effects
-* FIR
-* Granulator
-* Reverb
-* Parametric Equalizer
+* FIR [itaborala] -not_done
+* Granulator [itaborala] -not_done
+* Reverb [marianajo] -not_done
+* Parametric Equalizer [marianajo] -not_done
 
 ### Envelopes
-* ADSR
-* Random ADSR
+* ADSR [marianajo] -not_done
+* Linear Random Envelope [itaborala] -not_done
 
 ## Dependencies
 This patch was made using Pd-Vanilla.
