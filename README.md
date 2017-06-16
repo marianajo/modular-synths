@@ -7,7 +7,7 @@ By: [Mariana Jó](http://github.com/marianajo) and [Paulo Vitor de Itaboraí](ht
 Professor: Marcelo Queiroz
 
 ## Modules
-The synthesizer uses four modules: control, synthesis, effects and envelopes.
+The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2)envelopes.
 
 ### Control
 * MIDI file reader [marianajo] -not_done
