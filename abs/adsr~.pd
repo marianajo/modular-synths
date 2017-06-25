@@ -1,0 +1,20 @@
+#N canvas 579 218 384 342 10;
+#X obj 108 180 - 10;
+#X obj 150 180 - 10;
+#X obj 192 180 - 0.1;
+#X obj 235 180 - 10;
+#X obj 150 118 flatgui/knob 32 32 10 10010 1 0 empty empty D 0 -8 0
+8 -1.22434e+09 21923 -1.22434e+09 0 1;
+#X obj 192 118 flatgui/knob 32 32 0.1 1.1 1 0 empty empty S 0 -8 0
+8 -1.22434e+09 21923 -1.22434e+09 0 1;
+#X obj 108 118 flatgui/knob 32 32 10 10010 1 0 empty empty A 0 -8 0
+8 -1.22434e+09 21923 -1.22434e+09 0 1;
+#X obj 235 118 flatgui/knob 32 32 10 10010 1 0 empty empty R 0 -8 0
+8 -1.22434e+09 21923 -1.22434e+09 0 1;
+#X obj 104 50 inlet;
+#X obj 115 238 outlet~;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 0 0;
+#X connect 7 0 3 0;
+#X coords 0 -1 1 1 175 60 2 100 100;
