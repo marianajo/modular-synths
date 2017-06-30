@@ -1,4 +1,4 @@
-#N canvas 127 231 670 486 10;
+#N canvas 1858 360 670 486 10;
 #X obj 22 38 abs/midi_reader~;
 #X text 98 12 CONTROL;
 #X text 380 18 ENVELOPES;
