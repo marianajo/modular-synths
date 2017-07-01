@@ -10,7 +10,7 @@ Professor: Marcelo Queiroz
 The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2)envelopes.
 
 ### Control
-* MIDI file reader [marianajo] -not_done
+* MIDI file reader [marianajo] -WIP
 * Theremin Canvas [itaborala] -not_done
 
 ### Synthesis
@@ -27,7 +27,8 @@ The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2
 
 ### Envelopes
 * ADSR [marianajo] -not_done
-* Linear Random Envelope [itaborala] -not_done
+* Linear Random Envelope [itaborala] -WIP
 
 ## Dependencies
 This patch was made using Pd-Vanilla.
+- Flatgui
