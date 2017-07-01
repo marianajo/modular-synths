@@ -1,5 +1,6 @@
-#N canvas 504 282 670 486 10;
+#N canvas 498 282 670 486 10;
 #X obj 22 38 abs/midi_reader~;
 #X text 98 12 CONTROL;
 #X text 380 18 ENVELOPES;
 #X obj 335 45 abs/adsr~;
+#X obj 16 188 abs/fm;
