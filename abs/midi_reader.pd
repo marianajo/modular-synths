@@ -1,4 +1,4 @@
-#N canvas 1432 316 520 499 10;
+#N canvas 573 156 520 559 10;
 #X obj 106 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 126 108 Open MIDI;
@@ -34,18 +34,17 @@
 #X obj 195 419 env~;
 #X floatatom 195 443 5 0 0 0 - - -, f 5;
 #X obj 168 134 flatgui/knob 25 25 0 1 0 0 empty empty empty 0 -8 0
-8 1.84185e+09 21971 1.84183e+09 400 1;
+8 1.72186e+09 22019 1.72189e+09 800 1;
 #X msg 168 207 \$1 5;
 #X obj 168 270 line~;
-#X text 251 467 Amplitude;
-#X text 408 376 Frequency;
-#X obj 92 457 dac~;
-#X obj 195 466 outlet;
-#X obj 127 435 outlet~;
+#X obj 242 456 pack f f;
+#X obj 242 485 outlet;
+#X text 287 486 (f \, a);
 #X connect 0 0 13 0;
 #X connect 2 0 27 0;
 #X connect 4 0 16 0;
 #X connect 6 0 8 0;
+#X connect 6 0 33 0;
 #X connect 7 0 6 0;
 #X connect 8 0 20 0;
 #X connect 9 0 23 0;
@@ -62,14 +61,14 @@
 #X connect 17 0 8 0;
 #X connect 19 0 9 0;
 #X connect 20 0 28 0;
-#X connect 20 0 37 0;
 #X connect 23 0 10 0;
 #X connect 24 0 10 1;
 #X connect 27 0 16 0;
 #X connect 27 0 12 0;
 #X connect 28 0 29 0;
-#X connect 29 0 36 0;
+#X connect 29 0 33 1;
 #X connect 30 0 31 0;
 #X connect 31 0 32 0;
 #X connect 32 0 20 1;
+#X connect 33 0 34 0;
 #X coords 0 -1 1 1 100 75 2 100 100;

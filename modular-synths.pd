@@ -1,6 +1,9 @@
-#N canvas 498 282 670 486 10;
-#X obj 22 38 abs/midi_reader~;
+#N canvas 0 93 1366 675 10;
 #X text 98 12 CONTROL;
-#X text 380 18 ENVELOPES;
-#X obj 335 45 abs/adsr~;
-#X obj 16 188 abs/fm;
+#X text 219 390 ENVELOPES;
+#X obj 294 440 abs/adsr~;
+#X obj 785 79 abs/fm;
+#X obj 22 38 abs/midi_reader;
+#X obj 915 427 abs/reverb;
+#X text 1001 371 EFFECTS;
+#X text 971 30 SYNTHESIS;
