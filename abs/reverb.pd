@@ -1,6 +1,6 @@
-#N canvas 680 93 683 675 10;
-#X obj 373 45 hsl 128 15 0 1 0 0 empty dry_wet empty -2 -8 0 10 -262144
--1 -1 0 1;
+#N canvas 674 93 683 675 10;
+#X obj 373 45 hsl 128 15 0 1 0 0 empty \$0-dry_wet empty -2 -8 0 10
+-262144 -1 -1 0 1;
 #X obj 370 65 t b f;
 #X msg 370 87 1;
 #X obj 370 109 -;
@@ -8,40 +8,28 @@
 #X text 481 29 wet;
 #X msg 370 131 dry \$1;
 #X msg 318 131 wet \$1;
-#X obj 107 128 hsl 70 18 0 1 0 0 dry_wet empty empty 5 9 0 10 -262144
+#X obj 107 128 hsl 70 18 0 1 0 0 \$0-dry_wet empty empty 5 9 0 10 -262144
 -1 -1 0 1;
-#X obj 21 17 inlet;
-#X obj 21 39 unpack f f;
-#X text 19 2 (f \, a);
-#X floatatom 21 61 5 0 0 0 - - -, f 5;
-#X floatatom 88 61 5 0 0 0 - - -, f 5;
-#X obj 23 639 outlet;
-#X obj 23 611 pack f f;
-#X floatatom 23 590 5 0 0 0 - - -, f 5;
-#X floatatom 76 589 5 0 0 0 - - -, f 5;
-#X obj 107 150 hsl 70 18 0 1 0 0 roomsize empty roomsize 3 9 0 10 -262144
+#X obj 107 150 hsl 70 18 0 1 0 0 0$-roomsize empty roomsize 3 9 0 10
+-262144 -1 -1 0 1;
+#X obj 107 194 hsl 70 18 0 1 0 0 0$-width empty width 4 9 0 10 -262144
 -1 -1 0 1;
-#X obj 107 194 hsl 70 18 0 1 0 0 width empty width 4 9 0 10 -262144
--1 -1 0 1;
-#X obj 107 172 hsl 70 18 0 2 0 0 damping empty damping 3 9 0 10 -262144
--1 -1 0 1;
+#X obj 107 172 hsl 70 18 0 2 0 0 0$-damping empty damping 3 9 0 10
+-262144 -1 -1 0 1;
 #X text 108 129 dry;
 #X text 152 129 wet;
-#X obj 113 243 tgl 18 0 first_pass empty first_pass 20 10 0 10 -262144
+#X obj 113 243 tgl 18 0 0$-first_pass empty first_pass 20 10 0 10 -262144
 -1 -1 0 1;
-#X obj 113 220 tgl 18 0 freeze empty freeze 20 10 0 10 -262144 -1 -1
-0 1;
-#X obj 549 129 r roomsize;
-#X obj 551 238 r damping;
+#X obj 113 220 tgl 18 0 0$-freeze empty freeze 20 10 0 10 -262144 -1
+-1 0 1;
 #X msg 549 151 roomsize \$1;
-#X obj 549 182 r width;
 #X msg 549 204 width \$1;
 #X obj 423 427 freeverb~;
-#X obj 303 299 tgl 15 0 empty freeze empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X msg 303 321 freeze \$1;
-#X obj 188 335 tgl 15 0 empty first_pass empty 17 7 0 10 -262144 -1
+#X obj 303 299 tgl 15 0 empty 0$-freeze empty 17 7 0 10 -262144 -1
 -1 0 1;
+#X msg 303 321 freeze \$1;
+#X obj 188 335 tgl 15 0 empty 0$-first_pass empty 17 7 0 10 -262144
+-1 -1 0 1;
 #X msg 188 357 firstpassfilter \$1;
 #X floatatom 181 152 3 0 0 0 - - -, f 3;
 #X floatatom 181 130 3 0 0 0 - - -, f 3;
@@ -49,32 +37,46 @@
 #X floatatom 181 174 3 0 0 0 - - -, f 3;
 #X msg 551 260 damping \$1;
 #X text 128 101 REVERB;
+#X obj 393 509 outlet~;
+#X obj 21 18 inlet~;
+#X text 20 2 signal;
+#X obj 107 19 inlet;
+#X obj 107 41 unpack f f;
+#X text 105 4 (f \, a);
+#X floatatom 107 63 5 0 0 0 - - -, f 5;
+#X floatatom 174 63 5 0 0 0 - - -, f 5;
+#X obj 521 507 outlet~;
+#X text 398 494 signal left;
+#X text 526 486 signal right;
+#X obj 549 129 r 0$-roomsize;
+#X obj 551 238 r 0$-damping;
+#X obj 549 182 r 0$-width;
 #X connect 0 0 1 0;
 #X connect 0 0 7 0;
-#X connect 0 0 36 0;
+#X connect 0 0 24 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 1;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
-#X connect 6 0 30 0;
-#X connect 7 0 30 0;
-#X connect 9 0 10 0;
-#X connect 10 0 12 0;
-#X connect 10 1 13 0;
-#X connect 15 0 14 0;
-#X connect 16 0 15 0;
-#X connect 17 0 15 1;
-#X connect 25 0 27 0;
-#X connect 25 0 35 0;
-#X connect 26 0 39 0;
-#X connect 26 0 38 0;
-#X connect 27 0 30 0;
-#X connect 28 0 29 0;
-#X connect 28 0 37 0;
-#X connect 29 0 30 0;
-#X connect 31 0 32 0;
-#X connect 32 0 30 0;
-#X connect 33 0 34 0;
-#X connect 34 0 30 0;
-#X connect 39 0 30 0;
+#X connect 6 0 18 0;
+#X connect 7 0 18 0;
+#X connect 16 0 18 0;
+#X connect 17 0 18 0;
+#X connect 18 0 29 0;
+#X connect 18 1 37 0;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;
+#X connect 21 0 22 0;
+#X connect 22 0 18 0;
+#X connect 27 0 18 0;
+#X connect 30 0 18 0;
+#X connect 32 0 33 0;
+#X connect 33 0 35 0;
+#X connect 33 1 36 0;
+#X connect 40 0 16 0;
+#X connect 40 0 23 0;
+#X connect 41 0 27 0;
+#X connect 41 0 26 0;
+#X connect 42 0 17 0;
+#X connect 42 0 25 0;
 #X coords 0 -1 1 1 110 170 2 100 100;
