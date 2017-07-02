@@ -1,5 +1,5 @@
 #N canvas 0 93 1366 675 10;
 #X obj 24 16 abs/control;
 #X obj 405 8 abs/synthesis;
-#X obj 925 262 abs/effects;
+#X obj 927 261 abs/effects;
 #X obj 25 352 abs/envelopes;

@@ -1,5 +1,5 @@
-#N canvas 0 106 617 479 10;
-#X obj 114 157 abs/adsr~;
+#N canvas 0 132 617 479 10;
+#X obj 114 173 abs/adsr~;
 #X text 199 109 === ENVELOPES ===;
 #X obj 100 24 inlet~;
 #X text 98 8 signal;
@@ -13,6 +13,10 @@
 #X obj 259 399 outlet;
 #X text 307 397 (f \, a);
 #X obj 258 373 pack f f;
+#X obj 120 135 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 137 135 ADSR;
+#X text 137 150 Linear random;
 #X connect 4 0 5 0;
 #X connect 13 0 11 0;
-#X coords 0 -1 1 1 350 250 1 100 100;
+#X coords 0 -1 1 1 350 250 2 100 100;
