@@ -1,4 +1,4 @@
-#N canvas 389 110 1144 629 10;
+#N canvas 219 136 1144 629 10;
 #X floatatom 773 327 5 0 0 0 Carrier - -, f 5;
 #X obj 774 391 osc~;
 #X obj 775 527 *~;
@@ -9,7 +9,7 @@
 #X obj 1298 61 - 100;
 #X obj 1299 99 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 869 387 flatgui/knob 32 32 0 1 0 0 empty empty empty 0 -8 0
-8 -1.50405e+08 21858 -1.50256e+08 0 1;
+8 4.81641e+08 21913 4.81726e+08 0 1;
 #X msg 869 430 \$1 50;
 #X obj 869 452 line~;
 #X obj 773 357 +~;
@@ -61,20 +61,20 @@
 #X obj 267 179 tgl 15 0 n_tog empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 264 216 flatgui/knob 20 20 50 1000 0 0 n_metro empty empty 0
--8 0 8 -1.50405e+08 21858 -1.50256e+08 0 1;
+-8 0 8 4.81641e+08 21913 4.81726e+08 0 1;
 #X text 211 179 in/off;
 #X obj 267 197 bng 15 250 50 0 n_def empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 292 179 tgl 15 0 am_tog empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 289 216 flatgui/knob 20 20 50 1000 0 0 am_metro empty empty
-0 -8 0 8 -1.50405e+08 21858 -1.50256e+08 0 1;
+0 -8 0 8 4.81641e+08 21913 4.81726e+08 0 1;
 #X obj 292 197 bng 15 250 50 0 am_def empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 317 179 tgl 15 0 fm_tog empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 314 216 flatgui/knob 20 20 50 1000 0 0 fm_metro empty empty
-0 -8 0 8 -1.50405e+08 21858 -1.50256e+08 0 1;
+0 -8 0 8 4.81641e+08 21913 4.81726e+08 0 1;
 #X obj 317 197 bng 15 250 50 0 fm_def empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 268 159 n;
@@ -85,7 +85,6 @@
 #X obj 773 304 r freq;
 #X obj 112 157 vsl 15 128 0.001 700 1 0 H empty H 0 -9 0 10 -262144
 -1 -1 0 1;
-#X text 124 105 === FREQUENCY MODULATION ===;
 #X msg 888 76 125;
 #X obj 888 53 r am_def;
 #X obj 695 53 r n_def;
@@ -113,19 +112,22 @@
 #X text 1061 28 modular frequency;
 #X text 458 37 INPUTS;
 #X text 405 141 Calculation of mod_freq;
+#X text 33 515 Reference: Rafael Hernandez PURE DATA: 21 Beginning
+FM Synthesis https://www.youtube.com/watch?v=DgeTHuDSgC0;
+#X text 147 106 FREQUENCY MODULATION;
 #X connect 0 0 12 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
 #X connect 2 0 3 1;
-#X connect 2 0 82 0;
+#X connect 2 0 81 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
 #X connect 11 0 2 1;
-#X connect 11 0 85 0;
+#X connect 11 0 84 0;
 #X connect 12 0 1 0;
 #X connect 13 0 14 0;
 #X connect 15 0 17 0;
@@ -162,17 +164,17 @@
 #X connect 50 0 51 0;
 #X connect 51 0 52 0;
 #X connect 69 0 0 0;
-#X connect 72 0 35 0;
-#X connect 73 0 72 0;
-#X connect 74 0 39 0;
-#X connect 75 0 38 0;
-#X connect 76 0 26 0;
-#X connect 77 0 35 0;
-#X connect 78 0 29 0;
-#X connect 81 0 86 0;
+#X connect 71 0 35 0;
+#X connect 72 0 71 0;
+#X connect 73 0 39 0;
+#X connect 74 0 38 0;
+#X connect 75 0 26 0;
+#X connect 76 0 35 0;
+#X connect 77 0 29 0;
+#X connect 80 0 85 0;
+#X connect 81 0 80 0;
 #X connect 82 0 81 0;
-#X connect 83 0 82 0;
-#X connect 84 0 86 1;
-#X connect 85 0 84 0;
-#X connect 86 0 87 0;
+#X connect 83 0 85 1;
+#X connect 84 0 83 0;
+#X connect 85 0 86 0;
 #X coords 0 -1 1 1 250 200 2 100 100;

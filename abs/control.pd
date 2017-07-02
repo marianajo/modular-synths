@@ -1,0 +1,10 @@
+#N canvas 608 160 745 582 10;
+#X obj 112 152 abs/midi_reader;
+#X text 192 107 === CONTROL ===;
+#X obj 178 475 pack f f;
+#X obj 178 497 outlet;
+#X obj 265 497 outlet;
+#X text 179 516 (f \, a);
+#X text 272 517 bang;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 300 300 2 100 100;

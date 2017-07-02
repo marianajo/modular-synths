@@ -1,0 +1,12 @@
+#N canvas 0 132 612 486 10;
+#X obj 114 159 abs/reverb;
+#X text 243 107 === EFFECTS ===;
+#X obj 111 41 inlet~;
+#X text 117 22 signal;
+#X obj 222 60 unpack f f;
+#X obj 222 38 inlet;
+#X text 221 17 (f \, a);
+#X obj 107 431 outlet~;
+#X text 110 412 signal;
+#X connect 5 0 4 0;
+#X coords 0 -1 1 1 400 300 2 100 100;

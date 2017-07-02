@@ -1,0 +1,18 @@
+#N canvas 448 129 713 601 10;
+#X text 286 115 === SYNTHESIS ===;
+#X obj 108 151 abs/fm;
+#X obj 109 28 inlet;
+#X obj 193 30 inlet;
+#X text 108 12 (f \, a);
+#X text 196 12 bang;
+#X obj 267 27 inlet~;
+#X text 268 9 signal;
+#X obj 119 542 outlet~;
+#X text 119 525 signal;
+#X obj 246 545 outlet;
+#X obj 246 521 pack f f;
+#X text 290 546 (f \, a);
+#X obj 389 547 outlet;
+#X text 437 548 bang;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 500 400 2 100 100;
