@@ -1,4 +1,4 @@
-#N canvas 573 156 520 559 10;
+#N canvas 553 128 783 629 10;
 #X obj 106 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 126 108 Open MIDI;
@@ -8,38 +8,39 @@
 #X obj 106 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 126 149 Play;
-#X floatatom 242 361 5 0 0 0 - - -, f 5;
-#X obj 242 335 mtof;
-#X obj 242 387 osc~;
-#X obj 242 218 unpack;
-#X obj 242 273 stripnote;
-#X floatatom 242 308 5 0 0 0 - - -, f 5;
-#X obj 316 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X floatatom 312 422 5 0 0 0 - - -, f 5;
+#X obj 312 396 mtof;
+#X obj 312 448 osc~;
+#X obj 312 279 unpack;
+#X obj 312 334 stripnote;
+#X floatatom 312 369 5 0 0 0 - - -, f 5;
+#X obj 386 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 242 21 openpanel;
-#X msg 274 78 read \$1;
-#X obj 242 47 t b s;
-#X obj 242 108 cyclone/seq;
-#X msg 316 154 0;
-#X text 335 133 Final do sequenciamento.;
-#X obj 242 188 cyclone/midiparse;
-#X obj 151 403 *~;
-#X text 282 307 Número MIDI;
-#X text 283 359 Hertz;
-#X floatatom 242 240 5 0 0 0 - - -, f 5;
-#X floatatom 302 235 5 0 0 0 - - -, f 5;
-#X text 202 240 pitch;
-#X text 342 233 velocity;
-#X msg 339 95 stop;
-#X obj 195 419 env~;
-#X floatatom 195 443 5 0 0 0 - - -, f 5;
+#X obj 312 21 openpanel;
+#X msg 344 78 read \$1;
+#X obj 312 47 t b s;
+#X obj 312 168 cyclone/seq;
+#X msg 386 214 0;
+#X text 405 193 Final do sequenciamento.;
+#X obj 312 249 cyclone/midiparse;
+#X obj 151 463 *~;
+#X text 352 368 Número MIDI;
+#X text 353 420 Hertz;
+#X floatatom 312 301 5 0 0 0 - - -, f 5;
+#X floatatom 372 296 5 0 0 0 - - -, f 5;
+#X text 270 300 pitch;
+#X text 412 294 velocity;
+#X msg 409 95 stop;
+#X obj 195 479 env~;
+#X floatatom 195 503 5 0 0 0 - - -, f 5;
 #X obj 168 134 flatgui/knob 25 25 0 1 0 0 empty empty empty 0 -8 0
-8 1.72186e+09 22019 1.72189e+09 800 1;
-#X msg 168 207 \$1 5;
-#X obj 168 270 line~;
-#X obj 242 456 pack f f;
-#X obj 242 485 outlet;
-#X text 287 486 (f \, a);
+8 4.81668e+08 21913 4.79898e+08 0 1;
+#X msg 168 267 \$1 5;
+#X obj 168 330 line~;
+#X obj 378 458 outlet;
+#X text 424 459 frequency;
+#X obj 195 530 outlet;
+#X text 245 531 amplitude;
 #X connect 0 0 13 0;
 #X connect 2 0 27 0;
 #X connect 4 0 16 0;
@@ -66,9 +67,8 @@
 #X connect 27 0 16 0;
 #X connect 27 0 12 0;
 #X connect 28 0 29 0;
-#X connect 29 0 33 1;
+#X connect 29 0 35 0;
 #X connect 30 0 31 0;
 #X connect 31 0 32 0;
 #X connect 32 0 20 1;
-#X connect 33 0 34 0;
 #X coords 0 -1 1 1 100 75 2 100 100;
