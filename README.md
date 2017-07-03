@@ -10,7 +10,7 @@ Professor: Marcelo Queiroz
 The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2)envelopes.
 
 ### Control
-* MIDI file reader [marianajo] -WIP
+* MIDI file reader [marianajo] -DONE
 * Theremin Canvas [itaborala] -not_done
 
 ### Synthesis
@@ -24,6 +24,7 @@ The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2
 * Granulator [itaborala] -not_done
 * Reverb [marianajo] -WIP
 * Parametric Equalizer [marianajo] -not_done
+* Ring Modulation [marianajo] -DONE
 
 ### Envelopes
 * ADSR [marianajo] -WIP
