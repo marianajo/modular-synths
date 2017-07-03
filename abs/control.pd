@@ -20,81 +20,13 @@
 #X obj 102 403 r control-out-fa-\$0;
 #X obj 748 247 zexy/multiplex 1 2;
 #X obj 565 372 zexy/multiplex 1 2;
-#X obj 290 150 bng 15 250 50 0 empty Open_MIDI-0 Open_MIDI 17 7 0 10
--262144 -1 -1;
-#X obj 290 170 bng 15 250 50 0 empty MIDI_Stop-0 Stop 17 7 0 10 -262144
--1 -1;
-#X obj 290 190 bng 15 250 50 0 empty MIDI_Play-0 Play 17 7 0 10 -262144
--1 -1;
-#X obj 422 318 abs/midi_reader;
-#X obj 345 170 flatgui/knob 40 40 0 1 0 0 empty MIDI_Knob-0 empty 0
--8 0 8 3.28778e+06 1 2.23795e+06 0 1;
-#X obj 101 488 route 0 1;
-#X obj 101 455 vradio 15 1 0 2 empty control-selector-0 empty 0 -8
-0 10 -262144 -1 -1 1;
-#X obj 290 150 cnv 15 100 65 empty MIDI_hide-0 empty 20 12 0 14 -228856
--66577 0;
-#X msg 98 525 \; Open_MIDI-\$0 pos 210 220 \; MIDI_Stop-\$0 pos 210
-240 \; MIDI_Play-\$0 pos 210 260 \; MIDI_Knob-\$0 pos 265 240 \; MIDI_hide-\$0
-pos 290 150 \;;
-#X msg 419 526 \; Open_MIDI-\$0 pos 210 220 \; MIDI_Stop-\$0 pos 210
-240 \; MIDI_Play-\$0 pos 210 260 \; MIDI_Knob-\$0 pos 265 240 \; MIDI_hide-\$0
-pos 210 220 \;;
-#X obj 423 204 spigot;
-#X msg 423 134 stop;
-#X msg 422 115 open;
-#X msg 423 153 play;
-#X msg 423 174 knob \$1;
-#X obj 480 300 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 509 299 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 451 299 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 422 257 route knob play stop open;
-#X obj 495 189 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X floatatom 422 280 5 0 0 0 - - -, f 5;
-#X obj 495 81 vradio 15 1 0 2 empty control-selector-0 empty 0 -8 0
-10 -262144 -1 -1 1;
-#X obj 495 141 route 0 1;
-#X msg 520 167 0, f 1;
-#X msg 495 167 1, f 1;
-#X msg 259 525 \; Open_MIDI-\$0 pos 290 150 \; MIDI_Stop-\$0 pos 290
-170 \; MIDI_Play-\$0 pos 290 190 \; MIDI_Knob-\$0 pos 345 170 \; MIDI_hide-\$0
-pos 290 150 \;;
+#X obj 161 198 abs/midi_reader;
 #X connect 8 0 17 2;
 #X connect 10 0 16 2;
 #X connect 12 0 2 0;
 #X connect 15 0 1 0;
 #X connect 16 0 13 0;
 #X connect 17 0 14 0;
-#X connect 18 0 30 0;
-#X connect 19 0 29 0;
-#X connect 20 0 31 0;
-#X connect 21 0 17 0;
-#X connect 21 1 16 0;
-#X connect 22 0 32 0;
-#X connect 23 0 26 0;
-#X connect 23 1 43 0;
-#X connect 24 0 23 0;
-#X connect 28 0 36 0;
-#X connect 29 0 28 0;
-#X connect 30 0 28 0;
-#X connect 31 0 28 0;
-#X connect 32 0 28 0;
-#X connect 33 0 21 2;
-#X connect 34 0 21 3;
-#X connect 35 0 21 1;
-#X connect 36 0 38 0;
-#X connect 36 1 35 0;
-#X connect 36 2 33 0;
-#X connect 36 3 34 0;
-#X connect 37 0 28 1;
-#X connect 38 0 21 0;
-#X connect 39 0 40 0;
-#X connect 40 0 42 0;
-#X connect 40 1 41 0;
-#X connect 41 0 37 0;
-#X connect 42 0 37 0;
+#X connect 18 0 17 0;
+#X connect 18 1 16 0;
 #X coords 0 -1 1 1 300 300 2 100 100;

@@ -1,6 +1,6 @@
-#N canvas 0 93 1366 675 10;
+#N canvas 0 93 1280 675 10;
 #X text 286 115 === SYNTHESIS ===;
-#X obj 108 204 abs/fm;
+#X obj 107 203 abs/fm;
 #X obj 100 81 inlet;
 #X obj 558 81 inlet;
 #X text 103 105 (f \, a);
@@ -33,7 +33,6 @@
 #X obj 15 187 r \$0-b-fm;
 #X obj 729 330 vradio 15 1 0 4 empty \$0-synthesis-selector empty 0
 -8 0 10 -262144 -1 -1 0;
-#X obj 701 403 multiplex~ 1 2 3 4;
 #X obj 102 503 outlet~;
 #X text 774 349 signal;
 #X text 103 485 signal;
@@ -45,9 +44,10 @@
 #X text 1204 349 bang;
 #X obj 319 508 outlet;
 #X obj 562 504 outlet;
-#X obj 924 403 multiplex 1 2 3 4;
-#X obj 1131 403 multiplex 1 2 3 4;
-#X connect 1 0 30 0;
+#X obj 701 403 zexy/multiplex~ 1 2 3 4;
+#X obj 924 403 zexy/multiplex 1 2 3 4;
+#X obj 1131 403 zexy/multiplex 1 2 3 4;
+#X connect 1 0 39 0;
 #X connect 1 1 40 0;
 #X connect 1 2 41 0;
 #X connect 2 0 14 0;
@@ -64,10 +64,10 @@
 #X connect 21 3 25 0;
 #X connect 27 0 1 0;
 #X connect 28 0 1 1;
-#X connect 29 0 30 0;
-#X connect 30 0 31 0;
-#X connect 34 0 40 4;
-#X connect 36 0 41 4;
-#X connect 40 0 38 0;
-#X connect 41 0 39 0;
+#X connect 29 0 39 0;
+#X connect 33 0 40 4;
+#X connect 35 0 41 4;
+#X connect 39 0 30 0;
+#X connect 40 0 37 0;
+#X connect 41 0 38 0;
 #X coords 0 -1 1 1 500 400 2 100 100;
