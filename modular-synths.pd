@@ -1,8 +1,9 @@
-#N canvas 5 49 1280 675 10;
-#X obj 429 28 abs/fm;
+#N canvas 6 47 1280 675 10;
+#X obj 239 28 abs/fm;
 #X obj 101 127 abs/midi_reader;
 #X obj 85 350 abs/adsr~;
-#X obj 857 412 abs/reverb;
-#X obj 1003 427 abs/wahwah;
-#X obj 708 30 abs/vco~;
+#X obj 857 439 abs/reverb;
+#X obj 1003 454 abs/wahwah;
+#X obj 518 30 abs/vco~;
+#X obj 789 5 abs/formant~;
 #X coords 0 675 1 674 85 60 0;
