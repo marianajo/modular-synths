@@ -1,4 +1,4 @@
-#N canvas 1 22 1279 752 10;
+#N canvas 1 22 855 752 10;
 #X obj 764 451 bp~;
 #X obj 672 451 bp~;
 #X obj 580 451 bp~;
@@ -7,21 +7,21 @@
 #X obj 507 378 inlet;
 #X obj 631 593 outlet~;
 #X obj 200 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1200 1;
+-1 -1 0 1;
 #X obj 253 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1400 1;
+-1 -1 0 1;
 #X obj 305 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1700 1;
+-1 -1 0 1;
 #X obj 146 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2100 1;
-#X obj 183 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7700 1;
-#X obj 236 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11800 1;
-#X obj 288 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10800 1;
-#X obj 129 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11000 1;
+-1 -1 0 1;
+#X obj 183 140 vsl 13 200 0 1 0 0 empty \$0-f2 empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 236 140 vsl 13 200 0 1 0 0 empty \$0-f3 empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 288 140 vsl 13 200 0 1 0 0 empty \$0-f4 empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 129 140 vsl 13 200 0 1 0 0 empty f1-0 empty 0 -9 0 10 -262144
+-1 -1 9950 1;
 #X text 125 122 f1;
 #X text 143 122 Q1;
 #X text 179 122 f2;
@@ -40,9 +40,9 @@
 #X obj 698 355 r \$0-bp-Q3;
 #X obj 771 302 r \$0-bp-f4;
 #X obj 779 326 r \$0-bp-Q4;
-#X obj 165 702 s \$0-bp-f1;
+#X obj 165 714 s \$0-bp-f1;
 #X obj 182 607 s \$0-bp-Q1;
-#N canvas 492 174 112 116 toexp 0;
+#N canvas 965 101 112 116 toexp 0;
 #X floatatom 35 73 5 0 0 0 - - -, f 5;
 #X obj 34 24 exp;
 #X obj 40 48 - 0.99;
@@ -52,7 +52,7 @@
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 4 0 1 0;
-#X restore 165 646 pd toexp;
+#X restore 165 648 pd toexp;
 #N canvas 492 174 112 116 toexp 0;
 #X floatatom 35 73 5 0 0 0 - - -, f 5;
 #X obj 34 24 exp;
@@ -147,9 +147,9 @@
 #X obj 400 704 s \$0-bp-f4;
 #X text 197 67 FORMANTS;
 #X obj 110 379 hsl 230 20 0 1 0 0 empty empty VCO_Frequency_(1.4Hz-241Hz)
-6 9 0 12 -262144 -1 -1 1200 1;
+6 9 0 12 -262144 -1 -1 0 1;
 #X obj 110 357 hsl 230 20 0 1 0 0 empty empty VCO_Amplitude 6 9 0 12
--262144 -1 -1 7600 1;
+-262144 -1 -1 0 1;
 #X obj 29 582 pack;
 #X obj 68 557 t b f;
 #N canvas 1167 218 112 116 toexp2 0;
@@ -179,11 +179,29 @@
 #X msg 1075 72 4;
 #X obj 585 583 dac~;
 #X obj 110 424 hsl 230 20 0 1 0 0 empty empty GAIN 6 9 0 12 -262144
--1 -1 22900 1;
+-1 -1 0 1;
 #X obj 631 562 *~;
 #X obj 110 529 s \$0-form-gain;
 #X obj 646 532 r \$0-form-gain;
 #X obj 120 495 * 10;
+#X floatatom 178 694 5 0 0 0 - - -, f 5;
+#X obj 331 65 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 537 57 5 0 0 0 - - -, f 5;
+#N canvas 0 22 128 128 tolin 0;
+#X floatatom 35 73 5 0 0 0 - - -, f 5;
+#X obj 35 92 outlet;
+#X obj 35 5 inlet;
+#X obj 35 27 + 0.99;
+#X obj 35 49 log;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X restore 535 103 pd tolin;
+#X obj 537 76 / 5000;
+#X floatatom 535 125 15 0 0 0 - - -, f 15;
+#X msg 384 79 \; f1-\$0 0.0989399;
 #X connect 0 0 77 0;
 #X connect 1 0 77 0;
 #X connect 2 0 77 0;
@@ -215,6 +233,7 @@
 #X connect 36 0 37 0;
 #X connect 37 0 34 0;
 #X connect 38 0 33 0;
+#X connect 38 0 81 0;
 #X connect 39 0 42 0;
 #X connect 40 0 41 0;
 #X connect 41 0 52 0;
@@ -248,4 +267,8 @@
 #X connect 77 0 6 0;
 #X connect 79 0 77 1;
 #X connect 80 0 78 0;
+#X connect 82 0 87 0;
+#X connect 83 0 85 0;
+#X connect 84 0 86 0;
+#X connect 85 0 84 0;
 #X coords 0 -1 1 1 255 420 2 100 50;

@@ -5,6 +5,6 @@
 #X obj 857 439 abs/reverb;
 #X obj 1003 454 abs/wahwah;
 #X obj 518 30 abs/vco~;
-#X obj 789 5 abs/formant~;
+#X obj 787 5 abs/formant~;
 #X obj 240 364 abs/fir~;
 #X coords 0 675 1 674 85 60 0;
