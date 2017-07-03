@@ -14,19 +14,19 @@ The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2
 * Theremin Canvas [itaborala] -not_done
 
 ### Synthesis
-* VCO [itaborala] -not_done
+* VCO [itaborala] -WIP
 * Wavelets [itaborala] -not_done
-* FM [marianajo] -not_done
+* FM [marianajo] -WIP
 * Closed-form summation formulas [marianajo] -not_done
 
 ### Effects
 * FIR [itaborala] -not_done
 * Granulator [itaborala] -not_done
-* Reverb [marianajo] -not_done
+* Reverb [marianajo] -WIP
 * Parametric Equalizer [marianajo] -not_done
 
 ### Envelopes
-* ADSR [marianajo] -not_done
+* ADSR [marianajo] -WIP
 * Linear Random Envelope [itaborala] -WIP
 
 ## Dependencies
