@@ -1,4 +1,4 @@
-#N canvas 0 93 1366 675 10;
+#N canvas 310 143 745 582 10;
 #X obj 112 172 abs/midi_reader;
 #X text 192 107 === CONTROL ===;
 #X obj 102 424 outlet;
