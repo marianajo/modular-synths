@@ -1,51 +1,57 @@
-#N canvas 489 139 783 629 10;
-#X obj 106 108 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 324 68 870 669 10;
+#X obj 312 49 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 310 3 Open MIDI;
+#X obj 244 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 126 108 Open MIDI;
-#X obj 106 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 264 129 Stop;
+#X obj 206 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 126 128 Stop;
-#X obj 106 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 226 202 Play;
+#X floatatom 312 472 5 0 0 0 - - -, f 5;
+#X obj 312 446 mtof;
+#X obj 312 498 osc~;
+#X obj 312 329 unpack;
+#X obj 312 384 stripnote;
+#X floatatom 312 419 5 0 0 0 - - -, f 5;
+#X obj 386 244 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 126 149 Play;
-#X floatatom 312 422 5 0 0 0 - - -, f 5;
-#X obj 312 396 mtof;
-#X obj 312 448 osc~;
-#X obj 312 279 unpack;
-#X obj 312 334 stripnote;
-#X floatatom 312 369 5 0 0 0 - - -, f 5;
-#X obj 386 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 312 71 openpanel;
+#X msg 344 128 read \$1;
+#X obj 312 97 t b s;
+#X obj 312 218 cyclone/seq;
+#X msg 386 264 0;
+#X text 405 243 Final do sequenciamento.;
+#X obj 312 299 cyclone/midiparse;
+#X obj 151 513 *~;
+#X text 352 418 Número MIDI;
+#X text 353 470 Hertz;
+#X floatatom 312 351 5 0 0 0 - - -, f 5;
+#X floatatom 372 346 5 0 0 0 - - -, f 5;
+#X text 270 350 pitch;
+#X text 412 344 velocity;
+#X msg 409 145 stop;
+#X obj 195 529 env~;
+#X floatatom 195 553 5 0 0 0 - - -, f 5;
+#X obj 168 238 flatgui/knob 25 25 0 1 0 0 empty empty empty 0 -8 0
+8 3.28778e+06 1 2.23795e+06 0 1;
+#X msg 168 317 \$1 5;
+#X obj 168 380 line~;
+#X text 399 474 frequency;
+#X text 244 574 amplitude;
+#X obj 330 605 pack f f;
+#X obj 330 627 outlet;
+#X obj 519 507 outlet;
+#X text 522 524 bang;
+#X obj 519 455 sel 0;
+#X obj 519 480 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 312 21 openpanel;
-#X msg 344 78 read \$1;
-#X obj 312 47 t b s;
-#X obj 312 168 cyclone/seq;
-#X msg 386 214 0;
-#X text 405 193 Final do sequenciamento.;
-#X obj 312 249 cyclone/midiparse;
-#X obj 151 463 *~;
-#X text 352 368 Número MIDI;
-#X text 353 420 Hertz;
-#X floatatom 312 301 5 0 0 0 - - -, f 5;
-#X floatatom 372 296 5 0 0 0 - - -, f 5;
-#X text 270 300 pitch;
-#X text 412 294 velocity;
-#X msg 409 95 stop;
-#X obj 195 479 env~;
-#X floatatom 195 503 5 0 0 0 - - -, f 5;
-#X obj 168 134 flatgui/knob 25 25 0 1 0 0 empty empty empty 0 -8 0
-8 4.8014e+08 21913 4.81726e+08 1200 1;
-#X msg 168 267 \$1 5;
-#X obj 168 330 line~;
-#X text 399 424 frequency;
-#X text 244 524 amplitude;
-#X obj 330 555 pack f f;
-#X obj 330 577 outlet;
-#X obj 519 457 outlet;
-#X text 522 474 bang;
-#X obj 519 405 sel 0;
-#X obj 519 430 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 312 25 inlet;
+#X obj 244 103 inlet;
+#X obj 168 200 inlet;
+#X obj 206 174 inlet;
+#X obj 103 231 flatgui/knob 32 32 0 127 0 0 empty empty empty 0 -8
+0 8 3.26978e+06 1 2.23795e+06 0 1;
 #X connect 0 0 13 0;
 #X connect 2 0 27 0;
 #X connect 4 0 16 0;
@@ -75,10 +81,15 @@
 #X connect 27 0 40 0;
 #X connect 28 0 29 0;
 #X connect 29 0 35 1;
-#X connect 30 0 31 0;
 #X connect 31 0 32 0;
 #X connect 32 0 20 1;
 #X connect 35 0 36 0;
 #X connect 39 0 40 0;
 #X connect 40 0 37 0;
-#X coords 0 -1 1 1 100 75 2 100 100;
+#X connect 41 0 0 0;
+#X connect 42 0 2 0;
+#X connect 43 0 30 0;
+#X connect 43 0 45 0;
+#X connect 44 0 4 0;
+#X connect 45 0 31 0;
+#X coords 0 669 1 668 100 75 0;
