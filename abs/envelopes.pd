@@ -1,5 +1,5 @@
 #N canvas 348 139 1005 547 10;
-#X obj 114 159 abs/adsr~;
+#X obj 275 130 abs/adsr~;
 #X text 203 114 === ENVELOPES ===;
 #X obj 100 78 inlet~;
 #X text 101 101 signal;

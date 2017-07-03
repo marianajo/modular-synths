@@ -1,4 +1,4 @@
-#N canvas 674 93 683 675 10;
+#N canvas 222 66 683 675 10;
 #X obj 373 45 hsl 128 15 0 1 0 0 empty \$0-dry_wet empty -2 -8 0 10
 -262144 -1 -1 0 1;
 #X obj 370 65 t b f;
@@ -39,10 +39,10 @@
 #X text 128 101 REVERB;
 #X obj 393 509 outlet~;
 #X obj 21 18 inlet~;
-#X text 20 2 signal;
+#X text 99 80 signal;
 #X obj 107 19 inlet;
 #X obj 107 41 unpack f f;
-#X text 105 4 (f \, a);
+#X text 167 80 (f \, a);
 #X floatatom 107 63 5 0 0 0 - - -, f 5;
 #X floatatom 174 63 5 0 0 0 - - -, f 5;
 #X obj 521 507 outlet~;
@@ -51,6 +51,10 @@
 #X obj 549 129 r 0$-roomsize;
 #X obj 551 238 r 0$-damping;
 #X obj 549 182 r 0$-width;
+#X text 20 2 signal;
+#X text 105 4 (f \, a);
+#X text 101 275 L;
+#X text 198 274 R;
 #X connect 0 0 1 0;
 #X connect 0 0 7 0;
 #X connect 0 0 24 0;
@@ -79,4 +83,4 @@
 #X connect 41 0 26 0;
 #X connect 42 0 17 0;
 #X connect 42 0 25 0;
-#X coords 0 -1 1 1 110 170 2 100 100;
+#X coords 0 -1 1 1 110 210 2 100 80;

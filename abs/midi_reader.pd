@@ -35,14 +35,15 @@
 #X obj 519 455 sel 0;
 #X obj 519 480 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 61 58 bng 15 250 50 0 empty Open_MIDI-0 Open_MIDI 17 7 0 10
+#X obj 61 54 bng 15 250 50 0 empty Open_MIDI-0 Open_MIDI 17 7 0 10
 -262144 -1 -1;
-#X obj 61 78 bng 15 250 50 0 empty MIDI_Stop-0 Stop 17 7 0 10 -262144
+#X obj 61 74 bng 15 250 50 0 empty MIDI_Stop-0 Stop 17 7 0 10 -262144
 -1 -1;
-#X obj 61 98 bng 15 250 50 0 empty MIDI_Play-0 Play 17 7 0 10 -262144
+#X obj 61 94 bng 15 250 50 0 empty MIDI_Play-0 Play 17 7 0 10 -262144
 -1 -1;
-#X obj 116 78 flatgui/knob 40 40 0 1 0 0 empty MIDI_Knob-0 empty 0
--8 0 8 2.23792e+06 1 2.23795e+06 3900 1;
+#X obj 116 74 flatgui/knob 40 40 0 1 0 0 empty MIDI_Knob-0 empty 0
+-8 0 8 3.26978e+06 1 2.23795e+06 0 1;
+#X text 74 31 MIDI READER;
 #X connect 0 0 2 0;
 #X connect 0 0 28 0;
 #X connect 1 0 0 0;
@@ -78,4 +79,4 @@
 #X connect 35 0 21 0;
 #X connect 36 0 10 0;
 #X connect 37 0 24 0;
-#X coords 0 -1 1 1 120 75 2 50 50;
+#X coords 0 -1 1 1 120 95 2 50 25;

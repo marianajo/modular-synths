@@ -1,4 +1,4 @@
-#N canvas 0 93 1366 675 10;
+#N canvas 0 93 1280 675 10;
 #X floatatom 790 344 5 0 0 0 Carrier - -, f 5;
 #X obj 791 439 osc~;
 #X obj 792 519 *~;
@@ -7,7 +7,7 @@
 #X obj 1268 61 - 100;
 #X obj 1269 99 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 886 421 flatgui/knob 32 32 0 1 0 0 empty empty empty 0 -8 0
-8 -1.49483e+09 22086 -1.49458e+09 0 1;
+8 2.43677e+06 1 2.52787e+06 0 1;
 #X msg 886 464 \$1 50;
 #X obj 886 486 line~;
 #X obj 790 374 +~;
@@ -47,20 +47,20 @@
 #X obj 267 179 tgl 15 0 \$0-n_tog empty empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 264 216 flatgui/knob 20 20 50 1000 0 0 \$0-n_metro empty empty
-0 -8 0 8 -1.49483e+09 22086 -1.49458e+09 400 1;
+0 -8 0 8 2.43677e+06 1 2.52787e+06 0 1;
 #X text 211 179 in/off;
 #X obj 267 197 bng 15 250 50 0 \$0-n_def empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 292 179 tgl 15 0 \$0-am_tog empty empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 289 216 flatgui/knob 20 20 50 1000 0 0 \$0-am_metro empty empty
-0 -8 0 8 -1.49483e+09 22086 -1.49458e+09 1000 1;
+0 -8 0 8 2.43677e+06 1 2.52787e+06 0 1;
 #X obj 292 197 bng 15 250 50 0 \$0-am_def empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 317 179 tgl 15 0 \$0-fm_tog empty empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 314 216 flatgui/knob 20 20 50 1000 0 0 \$0-fm_metro empty empty
-0 -8 0 8 -1.49483e+09 22086 -1.49458e+09 800 1;
+0 -8 0 8 2.43677e+06 1 2.52787e+06 0 1;
 #X obj 317 197 bng 15 250 50 0 \$0-fm_def empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 268 159 n;
@@ -69,12 +69,12 @@
 #X text 176 199 set default;
 #X text 218 218 metro;
 #X obj 112 157 vsl 15 128 0.001 700 1 0 \$0-H empty H 0 -9 0 10 -262144
--1 -1 4800 1;
+-1 -1 0 1;
 #X msg 888 76 125;
 #X obj 132 157 vsl 15 128 0.001 700 1 0 \$0-ndx empty I 0 -9 0 10 -262144
--1 -1 8900 1;
+-1 -1 0 1;
 #X obj 153 157 vsl 15 128 0 1 0 0 \$0-mod_amp empty A 0 -9 0 10 -262144
--1 -1 5500 1;
+-1 -1 0 1;
 #X floatatom 932 562 5 0 0 0 final_freq - -, f 5;
 #X obj 879 535 snapshot~;
 #X floatatom 985 562 5 0 0 1 final_amp - -, f 5;
@@ -115,14 +115,14 @@ FM Synthesis https://www.youtube.com/watch?v=DgeTHuDSgC0, f 32;
 #X obj 792 590 outlet~;
 #X text 798 576 signal;
 #X obj 932 604 outlet;
-#X obj 330 51 outlet;
-#X text 330 70 bang;
-#X obj 330 22 inlet;
-#X text 337 6 bang;
+#X obj 1183 436 outlet;
+#X text 318 103 bang;
+#X obj 1183 407 inlet;
+#X text 1190 391 bang;
 #X msg 409 39 0;
 #X floatatom 1157 308 5 0 0 0 - - -, f 5;
 #X obj 977 453 tgl 15 0 empty \$0-tgl-fm-graph empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #N canvas 0 132 450 250 (subpatch) 0;
 #X array \$0-fm-graph 400 float 5;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -142,7 +142,7 @@ FM Synthesis https://www.youtube.com/watch?v=DgeTHuDSgC0, f 32;
 #X obj 977 482 metro 100;
 #X text 199 139 random generators;
 #X obj 327 263 tgl 15 0 \$0-tgl-fm-graph empty empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 977 507 tabwrite~ \$0-fm-graph;
 #X text 293 246 turn on;
 #X obj 483 83 s \$0-ndx;
@@ -154,7 +154,13 @@ FM Synthesis https://www.youtube.com/watch?v=DgeTHuDSgC0, f 32;
 #X obj 112 311 bng 15 250 50 0 \$0-fm-clear empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 129 309 clear;
-#X msg 268 47 0;
+#X msg 1121 432 0;
+#X text 103 105 (f \, a);
+#X text 101 393 signal;
+#X text 198 393 (f \, a);
+#X text 320 392 bang;
+#X obj 1122 459 s \$0-init;
+#X obj 526 301 r \$0-init;
 #X connect 0 0 10 0;
 #X connect 1 0 2 0;
 #X connect 2 0 60 0;
@@ -225,6 +231,7 @@ FM Synthesis https://www.youtube.com/watch?v=DgeTHuDSgC0, f 32;
 #X connect 114 3 112 0;
 #X connect 114 4 111 0;
 #X connect 115 0 102 0;
-#X connect 118 0 36 0;
-#X connect 118 0 37 0;
-#X coords 0 -1 1 1 250 300 2 100 100;
+#X connect 118 0 123 0;
+#X connect 124 0 37 0;
+#X connect 124 0 36 0;
+#X coords 0 -1 1 1 250 310 2 100 100;

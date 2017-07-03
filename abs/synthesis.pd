@@ -1,6 +1,6 @@
-#N canvas 0 93 1280 675 10;
+#N canvas 5 33 1280 675 10;
 #X text 286 115 === SYNTHESIS ===;
-#X obj 107 203 abs/fm;
+#X obj 247 166 abs/fm;
 #X obj 100 81 inlet;
 #X obj 558 81 inlet;
 #X text 103 105 (f \, a);
@@ -47,9 +47,9 @@
 #X obj 701 403 zexy/multiplex~ 1 2 3 4;
 #X obj 924 403 zexy/multiplex 1 2 3 4;
 #X obj 1131 403 zexy/multiplex 1 2 3 4;
-#X connect 1 0 39 0;
-#X connect 1 1 40 0;
-#X connect 1 2 41 0;
+#X connect 1 0 40 0;
+#X connect 1 1 41 0;
+#X connect 1 2 39 0;
 #X connect 2 0 14 0;
 #X connect 3 0 21 0;
 #X connect 13 0 14 0;
@@ -62,8 +62,8 @@
 #X connect 21 1 23 0;
 #X connect 21 2 24 0;
 #X connect 21 3 25 0;
-#X connect 27 0 1 0;
-#X connect 28 0 1 1;
+#X connect 27 0 1 1;
+#X connect 28 0 1 0;
 #X connect 29 0 39 0;
 #X connect 33 0 40 4;
 #X connect 35 0 41 4;

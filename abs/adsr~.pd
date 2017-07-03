@@ -1,13 +1,13 @@
-#N canvas -109 153 1352 543 10;
+#N canvas -1 22 1280 543 10;
 #X obj 141 119 vsl 15 128 0.1 3000 0 0 \$0-adsr-decay empty D 4 -9
-0 10 -262144 -1 -1 6600 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 173 119 vsl 15 128 0.1 1 1 0 \$0-adsr-sustain empty S 4 -9 0
-10 -262144 -1 -1 1300 1;
+10 -262144 -1 -1 0 1;
 #X obj 205 119 vsl 15 128 0.2 5000 0 0 \$0-adsr-release empty R 4 -9
-0 10 -262144 -1 -1 1100 1;
+0 10 -262144 -1 -1 0 1;
 #X obj 112 119 vsl 15 128 0.2 3000 0 0 \$0-adsr-attack empty A 4 -9
-0 10 -262144 -1 -1 1300 1;
-#X obj 12 93 / 1000;
+0 10 -262144 -1 -1 0 1;
+#X obj 6 62 / 1000;
 #X floatatom 103 252 4 0 0 0 - - -, f 4;
 #X obj 135 364 / 1000;
 #X floatatom 135 252 4 0 0 0 - - -, f 4;
@@ -27,7 +27,7 @@
 #X obj 815 421 pack f f f;
 #X msg 815 443 0 \$2 \$3;
 #X obj 1059 456 pack f f f f;
-#X obj 135 69 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 138 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 30 411 Calculation of relase delay. Release should start right
 after attack + decay;
@@ -37,7 +37,7 @@ to seconds for the GUI;
 #X text 840 348 RELEASE;
 #X text 1074 319 ATTACK \, DECAY & SUSTAIN;
 #X msg 1059 478 \$1 \$2 0 \, \$3 \$4 \$2;
-#X obj 12 71 r \$0-adsr-attack;
+#X obj 6 40 r \$0-adsr-attack;
 #X obj 165 305 r \$0-adsr-sustain;
 #X obj 135 342 r \$0-adsr-decay;
 #X obj 8 445 r \$0-adsr-attack;
@@ -50,20 +50,20 @@ to seconds for the GUI;
 #X obj 1140 433 r \$0-adsr-decay;
 #X obj 258 214 r \$0-adsr-release;
 #X obj 796 617 outlet~;
-#X obj 766 44 inlet~;
-#X text 766 28 signal;
-#X obj 931 46 inlet;
-#X text 926 28 (f \, a);
+#X obj 280 32 inlet~;
+#X text 101 76 signal;
+#X obj 473 28 inlet;
+#X text 146 78 (f \, a);
 #X obj 726 336 inlet;
-#X obj 931 68 unpack f f;
-#X obj 998 98 s 0$-adsr-amp;
-#X obj 931 120 s 0$-adsr-freq;
+#X obj 473 50 unpack f f;
+#X obj 540 80 s 0$-adsr-amp;
+#X obj 473 102 s 0$-adsr-freq;
 #X obj 760 217 t b f f;
 #X obj 760 194 r 0$-adsr-freq;
-#X obj 767 66 s~ \$0-adsr-signal;
+#X obj 280 54 s~ \$0-adsr-signal;
 #X obj 672 503 r~ \$0-adsr-signal;
 #X msg 726 359 1;
-#X text 726 317 bang;
+#X text 199 77 bang;
 #X obj 1100 163 r \$0-adsr-amp;
 #X obj 1179 213 *;
 #X obj 1179 235 s \$0-scaled-sustain;
@@ -640,7 +640,7 @@ to seconds for the GUI;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ;
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #A 19000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -1400,6 +1400,10 @@ to seconds for the GUI;
 #X msg 766 147 1;
 #X obj 748 621 dac~;
 #X obj 625 453 osc~ 200;
+#X text 100 276 signal;
+#X text 468 10 (f \, a);
+#X text 726 317 bang;
+#X text 280 16 signal;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
 #X connect 9 0 10 0;
@@ -1445,4 +1449,4 @@ to seconds for the GUI;
 #X connect 61 0 23 2;
 #X connect 64 0 52 0;
 #X connect 66 0 19 0;
-#X coords 0 -1 1 1 132 171 2 100 100;
+#X coords 0 -1 1 1 132 216 2 100 75;

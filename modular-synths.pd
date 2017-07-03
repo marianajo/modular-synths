@@ -1,6 +1,7 @@
 #N canvas 5 49 1280 675 10;
-#X obj 408 20 abs/synthesis;
-#X obj 927 261 abs/effects;
-#X obj 25 352 abs/envelopes;
-#X obj 41 27 abs/control;
+#X obj 429 28 abs/fm;
+#X obj 101 127 abs/midi_reader;
+#X obj 85 350 abs/adsr~;
+#X obj 824 338 abs/reverb;
+#X obj 970 353 abs/wahwah;
 #X coords 0 675 1 674 85 60 0;
