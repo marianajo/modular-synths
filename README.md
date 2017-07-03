@@ -17,18 +17,19 @@ The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2
 * VCO [itaborala] -DONE
 * Formants [itaborala] -DONE
 * FM [marianajo] -DONE
-* Closed-form summation formulas [marianajo] -not_done
+* Chebychev Synthesis [marianajo] -DONE
 
 ### Effects
 * FIR [itaborala] -DONE
 * Granulator [itaborala] -not_done
 * Reverb [marianajo] -DONE
-* Parametric Equalizer [marianajo] -A DISCUTIR
 * Ring Modulation [marianajo] -DONE
+* ~Parametric Equalizer [marianajo]~ -A DISCUTIR
 
 ### Envelopes
 * ADSR [marianajo] -WIP (falta fazer grafico)
-* Linear Random Envelope [itaborala] -WIP
+* Graphic Envelope Generator [marianajo] -DONE
+* ~Linear Random Envelope [itaborala] -WIP~
 
 ## Dependencies
 This patch was made using Pd-Vanilla.
