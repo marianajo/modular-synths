@@ -75,6 +75,27 @@ to seconds for the GUI;
 #X text 468 10 (f \, a);
 #X text 726 317 bang;
 #X text 280 16 signal;
+#N canvas 526 157 781 412 envgraph 1;
+#X obj 46 179 tabwrite \$0-adsr-graph;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array adsr-graph 10 float 1;
+#A 0 0 0 1 0 1 0 0 1 0 0;
+#X coords 0 0 10 10 200 140 1 0 0;
+#X restore 501 216 graph;
+#X obj 32 18 r \$0-adsr-attack;
+#X obj 163 18 r \$0-adsr-decay;
+#X obj 292 18 r \$0-scaled-sustain;
+#X obj 445 18 r \$0-adsr-release;
+#X obj 584 18 r \$0-adsr-release_delay;
+#X floatatom 56 137 5 0 0 0 - - -, f 5;
+#X msg 182 105;
+#X obj 239 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 260 240 zerar;
+#X msg 446 108 \; adsr-graph resize 10 \; adsr-graph bounds 0 0 10
+10 \; adsr-graph xlabel 0 1 2 3 4 5 6 7 8 9 10;
+#X connect 7 0 0 0;
+#X restore 939 72 pd envgraph;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
 #X connect 9 0 10 0;
