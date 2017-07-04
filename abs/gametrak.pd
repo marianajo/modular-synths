@@ -1,0 +1,22 @@
+#N canvas 680 93 683 675 10;
+#X obj 143 257 hid;
+#X msg 143 14 print;
+#X obj 331 36 vradio 15 1 0 15 empty empty empty 0 -8 0 10 -262144
+-1 -1 6;
+#X obj 143 314 print;
+#X msg 175 153 refresh;
+#X msg 331 266 open \$1;
+#X obj 246 197 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 247 362 close;
+#X msg 62 192 poll 20;
+#X msg 106 79 info;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
