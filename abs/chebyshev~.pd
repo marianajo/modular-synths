@@ -1,4 +1,4 @@
-#N canvas -23 -988 1366 675 10;
+#N canvas 0 93 1366 675 10;
 #X obj 352 118 / 100;
 #X floatatom 352 98 5 0 100 0 - - -, f 5;
 #X obj 330 188 *~;
@@ -8,15 +8,15 @@
 #X obj 330 237 +~ 129;
 #X obj 330 286 hip~ 5;
 #X obj 178 242 vsl 10 128 0 100 0 0 \$0-cheb2 empty 2 2 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 7500 1;
 #X obj 192 242 vsl 10 128 0 100 0 0 \$0-cheb3 empty 3 2 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5400 1;
 #X obj 208 242 vsl 10 128 0 100 0 0 \$0-cheb4 empty 4 2 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5300 1;
 #X obj 222 242 vsl 10 128 0 100 0 0 \$0-cheb5 empty 5 2 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 5900 1;
 #X obj 236 242 vsl 10 128 0 100 0 0 \$0-cheb6 empty 6 2 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3100 1;
 #N canvas 432 102 862 666 polynomials 0;
 #X obj 141 304 t b b;
 #X obj 213 329 f;
@@ -484,12 +484,12 @@ them in a wavetable for use later.;
 #X connect 11 0 6 0;
 #X restore 702 461 pd cheb-spec;
 #X obj 703 438 *~ 3;
-#X floatatom 194 211 5 0 0 1 freq - -, f 5;
+#X floatatom 182 211 5 0 0 1 freq - -, f 5;
 #X obj 24 237 osc~;
 #X text 41 363 debug tools;
 #X obj 397 451 outlet~;
 #X obj 704 388 metro 100;
-#N canvas 0 22 450 278 (subpatch) 0;
+#N canvas 0 50 450 278 (subpatch) 0;
 #X array \$0-cheb-spec 64 float 3;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
@@ -505,12 +505,12 @@ them in a wavetable for use later.;
 #X text 24 124 (f \, a);
 #X obj 854 583 inlet;
 #X obj 854 605 outlet;
-#X text 225 161 bang;
+#X text 221 163 bang;
 #X text 855 566 bang;
 #X text 203 374 f \, a;
 #X text 170 374 ~;
 #X text 243 374 b;
-#X text 171 187 ==CHEBYCHEV==;
+#X text 179 187 CHEBYCHEV;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 5 0;
