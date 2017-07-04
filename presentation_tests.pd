@@ -1,1 +1,8 @@
 #N canvas 0 22 1257 680 10;
+#X obj 96 457 unpack;
+#X floatatom 96 479 5 0 0 0 - - -, f 5;
+#X obj 79 41 abs/theremin;
+#X obj 591 49 abs/formant~;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 2;
