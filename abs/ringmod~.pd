@@ -1,11 +1,10 @@
-#N canvas 398 156 532 276 10;
+#N canvas 11 -768 532 276 10;
 #X obj 263 167 *~;
-#X obj 312 51 hsl 128 15 0 127 0 0 empty \$0-ringmod-freq empty -2
+#X obj 311 71 hsl 128 15 0 10000 0 0 empty \$0-ringmod-freq empty -2
 -8 0 10 -262144 -1 -1 0 1;
-#X obj 309 71 mtof;
 #X obj 309 93 osc~;
 #X obj 313 223 tabwrite~ \$0-ringmod-graph;
-#X obj 340 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 340 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 340 174 metro 100;
 #N canvas 0 106 450 250 (subpatch) 0;
@@ -27,19 +26,29 @@
 0.0114135 0.00625068 -0.0037101 -0.0130131 -0.0150932 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 119 -1 120 80 2 0 0;
-#X restore 126 139 graph;
+#X restore 131 139 graph;
 #X obj 264 21 inlet~;
 #X text 265 4 signal;
-#X text 125 100 RING MODULATION;
-#X obj 105 138 vsl 15 80 0 127 0 0 \$0-ringmod-freq empty empty 0 -9
-0 10 -262144 -1 -1 0 1;
+#X text 130 100 RING MODULATION;
+#X obj 81 138 vsl 15 80 0 35 0 0 \$0-ringmod-freq-low empty empty 0
+-9 0 10 -262144 -1 -1 0 1;
 #X obj 264 250 outlet~;
-#X connect 0 0 4 0;
-#X connect 0 0 12 0;
+#X obj 312 51 hsl 128 15 0 35 0 0 empty \$0-ringmod-freq-low empty
+-2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 102 138 vsl 15 80 0 10000 0 0 \$0-ringmod-freq empty empty 0
+-9 0 10 -262144 -1 -1 0 1;
+#X text 84 158 L;
+#X text 84 168 o;
+#X text 105 157 H;
+#X text 105 167 i;
+#X text 73 102 In;
+#X text 72 230 Out;
+#X connect 0 0 3 0;
+#X connect 0 0 11 0;
 #X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X connect 3 0 0 1;
-#X connect 5 0 6 0;
-#X connect 6 0 4 0;
-#X connect 8 0 0 0;
-#X coords 0 -1 1 1 155 125 1 100 100;
+#X connect 2 0 0 1;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 7 0 0 0;
+#X connect 12 0 2 0;
+#X coords 0 -1 1 1 185 145 2 70 100;
