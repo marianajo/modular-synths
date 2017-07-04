@@ -1,4 +1,4 @@
-#N canvas 222 66 683 675 10;
+#N canvas 216 93 683 675 10;
 #X obj 373 45 hsl 128 15 0 1 0 0 empty \$0-dry_wet empty -2 -8 0 10
 -262144 -1 -1 0 1;
 #X obj 370 65 t b f;
@@ -18,9 +18,9 @@
 -262144 -1 -1 0 1;
 #X text 108 129 dry;
 #X text 152 129 wet;
-#X obj 113 243 tgl 18 0 0$-first_pass empty first_pass 20 10 0 10 -262144
+#X obj 114 237 tgl 18 0 0$-first_pass empty first_pass 20 10 0 10 -262144
 -1 -1 0 1;
-#X obj 113 220 tgl 18 0 0$-freeze empty freeze 20 10 0 10 -262144 -1
+#X obj 114 214 tgl 18 0 0$-freeze empty freeze 20 10 0 10 -262144 -1
 -1 0 1;
 #X msg 549 151 roomsize \$1;
 #X msg 549 204 width \$1;
@@ -39,10 +39,10 @@
 #X text 128 101 REVERB;
 #X obj 393 509 outlet~;
 #X obj 21 18 inlet~;
-#X text 99 80 signal;
+#X text 101 82 signal;
 #X obj 107 19 inlet;
 #X obj 107 41 unpack f f;
-#X text 167 80 (f \, a);
+#X text 161 82 (f \, a);
 #X floatatom 107 63 5 0 0 0 - - -, f 5;
 #X floatatom 174 63 5 0 0 0 - - -, f 5;
 #X obj 521 507 outlet~;
@@ -53,8 +53,8 @@
 #X obj 549 182 r 0$-width;
 #X text 20 2 signal;
 #X text 105 4 (f \, a);
-#X text 101 275 L;
-#X text 198 274 R;
+#X text 100 255 L;
+#X text 197 254 R;
 #X connect 0 0 1 0;
 #X connect 0 0 7 0;
 #X connect 0 0 24 0;
@@ -83,4 +83,4 @@
 #X connect 41 0 26 0;
 #X connect 42 0 17 0;
 #X connect 42 0 25 0;
-#X coords 0 -1 1 1 110 210 2 100 80;
+#X coords 0 -1 1 1 110 190 2 100 80;
