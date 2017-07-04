@@ -1,7 +1,7 @@
-#N canvas 0 93 1366 675 10;
+#N canvas 8 22 1366 675 10;
 #X obj 238 -200 abs/fm;
 #X obj 17 -207 abs/midi_reader;
-#X obj 162 145 abs/adsr~;
+#X obj 163 146 abs/adsr~;
 #X obj 1065 95 abs/reverb;
 #X obj 951 310 abs/wahwah;
 #X obj 524 149 abs/fir~;
@@ -22,7 +22,7 @@
 #X obj 86 312 dac~;
 #X obj 98 267 *~;
 #X obj 113 92 vsl 15 128 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 2500 1;
 #X msg 113 224 \$1 50;
 #X obj 113 246 line~;
 #X text 33 124 MASTER;
