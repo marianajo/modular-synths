@@ -1,4 +1,4 @@
-#N canvas 151 124 1075 608 10;
+#N canvas 145 150 1075 608 10;
 #X obj 68 54 key;
 #X obj 68 76 sel 97;
 #X obj 836 458 keyup;
@@ -114,7 +114,7 @@
 #X obj 415 384 outlet;
 #X obj 909 525 outlet;
 #X obj 118 400 hradio 15 1 0 8 \$0-keys-natural empty empty 0 -8 0
-10 -262144 -1 -1 4;
+10 -262144 -1 -1 0;
 #X msg 37 346 0;
 #X msg 82 346 1;
 #X msg 123 345 2;
@@ -124,7 +124,7 @@
 #X msg 273 345 6;
 #X msg 313 344 7;
 #X obj 540 384 hradio 15 1 0 5 \$0-key-sharp empty empty 0 -8 0 10
--262144 -1 -1 4;
+-262144 -1 -1 0;
 #X obj 414 363 pack f f;
 #X msg 537 346 0;
 #X msg 623 345 2;
@@ -135,9 +135,9 @@
 #X msg 813 344 7;
 #X msg 581 343 1;
 #X obj 319 529 hradio 20 1 0 8 empty \$0-keys-natural empty 0 -8 0
-10 -262144 -1 -1 4;
+10 -262144 -1 -1 0;
 #X obj 332 500 hradio 25 1 0 5 empty \$0-key-sharp empty 0 -8 0 10
--1 -262144 -1 4;
+-1 -262144 -1 0;
 #X text 323 551 C;
 #X text 343 550 D;
 #X text 364 550 E;
@@ -152,7 +152,7 @@
 #X text 463 551 C;
 #X text 361 480 D#;
 #X text 366 453 KEYMAPPER;
-#X text 299 574 (f \, a);
+#X text 300 572 (f \, a);
 #X text 466 574 bang;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
@@ -264,4 +264,4 @@
 #X connect 113 0 109 0;
 #X connect 114 0 109 0;
 #X connect 118 0 109 0;
-#X coords 0 -1 1 1 200 140 1 300 450;
+#X coords 0 -1 1 1 200 140 2 300 450;
