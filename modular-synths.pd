@@ -1,33 +1,32 @@
-#N canvas -266 -1058 1920 1036 10;
-#X obj 380 103 abs/fm;
-#X obj 143 208 abs/midi_reader;
-#X obj 85 711 abs/adsr~;
-#X obj 1277 769 abs/reverb;
-#X obj 1423 784 abs/wahwah;
-#X obj 660 694 abs/fir~;
-#X obj 1046 73 abs/formant~;
-#X obj 1409 160 abs/chebyshev~;
-#X obj 1064 800 abs/ringmod~;
-#X obj 287 719 abs/env_generator~;
-#X text 211 130 CONTROL;
-#X text 968 68 SYNTHESIS;
-#X text 1120 680 FX;
-#X text 370 684 ENVELOPE;
-#X obj 657 467 env~;
-#X obj 657 489 - 100;
-#X obj 657 511 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
-#X obj 113 63 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X msg 113 83 \; pd dsp \$1;
-#X obj 717 623 dac~;
-#X obj 729 578 *~;
-#X obj 744 403 vsl 15 128 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1700 1;
-#X msg 744 535 \$1 50;
-#X obj 744 557 line~;
-#X text 664 435 MASTER;
-#X obj 777 98 abs/vco~;
-#X obj 1299 527 abs/ringmod~;
+#N canvas 0 22 1280 752 10;
+#X obj 158 -123 abs/fm;
+#X obj 17 -130 abs/midi_reader;
+#X obj 162 222 abs/adsr~;
+#X obj 1065 172 abs/reverb;
+#X obj 951 387 abs/wahwah;
+#X obj 524 226 abs/fir~;
+#X obj 693 -200 abs/formant~;
+#X obj 978 -104 abs/chebyshev~;
+#X obj 853 230 abs/ringmod~;
+#X obj 303 233 abs/env_generator~;
+#X text 211 -154 CONTROL;
+#X text 968 -216 SYNTHESIS;
+#X text 862 392 FX;
+#X text 254 205 ENVELOPE;
+#X obj 26 233 env~;
+#X obj 26 255 - 100;
+#X obj 26 277 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 113 -221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 113 -201 \; pd dsp \$1;
+#X obj 86 389 dac~;
+#X obj 98 344 *~;
+#X obj 113 169 vsl 15 128 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X msg 113 301 \$1 50;
+#X obj 113 323 line~;
+#X text 33 201 MASTER;
+#X obj 425 -150 abs/vco~;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
 #X connect 17 0 18 0;
@@ -37,4 +36,4 @@
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
 #X connect 23 0 20 1;
-#X coords 0 1036 1 1035 85 60 0;
+#X coords 0 752 1 751 85 60 0;
