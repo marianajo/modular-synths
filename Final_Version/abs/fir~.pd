@@ -1,0 +1,111 @@
+#N canvas 0 22 838 673 10;
+#X obj 103 195 openpanel;
+#X obj 103 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 103 217 read -resize \$1 Coeff;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array Coeff 256 float 0;
+#X coords 0 1 255 -1 220 90 1 0 0;
+#X restore 441 115 graph;
+#X obj 103 239 soundfiler;
+#X floatatom 161 271 5 0 0 0 Coef_Size - -, f 5;
+#X obj 252 426 rfft~;
+#X obj 252 448 cyclone/cartopol~;
+#X obj 252 472 expr~ $v1/$f2;
+#X obj 327 261 vradio 15 1 0 6 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 348 260 64;
+#X text 348 276 128;
+#X text 348 291 256;
+#X text 348 306 512;
+#X text 349 321 1024;
+#X text 349 336 2048;
+#X obj 329 355 expr pow(2 \, $f1) * 64;
+#X obj 326 219 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 251 219 Block size;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-Frequency_Response 32 float 1;
+#A 0 2.03828 0.498028 0.657615 0.347104 0.181855 0.184273 0.130831
+0.112088 0.10257 0.0892895 0.0832138 0.0730522 0.0681174 0.0629941
+0.0594566 0.056166 0.053314 0.050684 0.0485449 0.0467528 0.0454176
+0.0446177 0.042652 0.0418669 0.0405636 0.0398546 0.0391922 0.0381333
+0.0394919 0.0386299 0.0386494 0.0387132;
+#X coords 0 1 31 -0.1 220 90 1 0 0;
+#X restore 441 220 graph;
+#X obj 330 393 t f f f;
+#X obj 252 531 tabwrite~ \$0-Frequency_Response;
+#X obj 504 485 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 504 514 metro 50;
+#X obj 442 72 bng 25 250 50 0 empty empty Open_Coefficient_File 27
+9 0 10 -262144 -1 -1;
+#X obj 272 99 s \$0-fir-panel;
+#X obj 103 124 r \$0-fir-panel;
+#X text 571 52 FIR;
+#X obj 666 115 vsl 15 192 0 127 0 1 \$0-fir-gain empty gain -7 -8 0
+10 -225271 -42246 -90881 11900 1;
+#X obj 687 110 vu 15 200 empty empty 8 -8 0 10 -66577 -1 1 0;
+#X obj 696 21 r \$0-fir-vu;
+#N canvas 275 54 864 531 Fir 0;
+#X text 44 159 based on iemlib implementation:;
+#X text 115 208 IEM KUG;
+#X text 99 196 musil;
+#X text 129 196 @;
+#X text 135 196 iem.at;
+#X text 98 218 Graz \, Austria;
+#X text 50 185 Thomas Musil 2000 - 2005;
+#X obj 387 155 vsl 15 128 0 127 0 1 empty \$0-fir-gain gain -7 -8 0
+10 -225271 -42246 -90881 7913 1;
+#X floatatom 276 270 5 0 0 0 - - -, f 5;
+#X obj 243 294 iemlib/gainvu~ 300;
+#X obj 242 63 inlet~;
+#X obj 242 183 iemlib/FIR~ Coeff 256;
+#X msg 292 152 set Coeff \$1;
+#X obj 243 348 outlet~;
+#X obj 349 319 s \$0-fir-vu;
+#X obj 289 233 outlet~;
+#X obj 292 77 inlet;
+#X connect 7 0 9 1;
+#X connect 9 0 13 0;
+#X connect 9 1 8 0;
+#X connect 9 2 14 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 0;
+#X connect 16 0 12 0;
+#X restore 128 409 pd Fir;
+#X obj 128 525 outlet~;
+#X obj 67 392 inlet~;
+#X text 112 170 based on EP2 implementation;
+#X obj 504 444 loadbang;
+#X msg 504 466 1;
+#X text 428 41 Input;
+#X text 427 323 Output;
+#X obj 332 171 loadbang;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 31 1;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 21 0;
+#X connect 9 0 16 0;
+#X connect 16 0 20 0;
+#X connect 17 0 9 0;
+#X connect 20 0 8 1;
+#X connect 22 0 23 0;
+#X connect 23 0 21 0;
+#X connect 24 0 25 0;
+#X connect 26 0 1 0;
+#X connect 30 0 29 0;
+#X connect 31 0 32 0;
+#X connect 31 1 6 0;
+#X connect 33 0 31 0;
+#X connect 35 0 36 0;
+#X connect 36 0 22 0;
+#X connect 39 0 17 0;
+#X coords 0 -1 1 1 320 300 2 425 40;

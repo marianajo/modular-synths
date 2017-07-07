@@ -1,0 +1,19 @@
+#N canvas 230 52 804 544 10;
+#X obj 112 211 abs/reverb;
+#X text 243 107 === EFFECTS ===;
+#X obj 103 79 inlet~;
+#X text 100 99 signal;
+#X obj 433 73 unpack f f;
+#X obj 433 51 inlet;
+#X text 454 100 (f \, a);
+#X obj 99 454 outlet~;
+#X text 99 434 signal;
+#X obj 113 129 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 130 129 FIR;
+#X text 130 145 Granulator;
+#X text 130 159 Reverb;
+#X text 130 175 Parametric Equalizer;
+#X obj 229 211 abs/wahwah;
+#X connect 5 0 4 0;
+#X coords 0 -1 1 1 400 350 2 100 100;
