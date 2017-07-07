@@ -40,6 +40,8 @@ This patch was made using Pd-Vanilla.
 
 * VCO Anti-Alias Pulse wave --wip
 * Messages bug  in 'formant~.pd'
+* noteoff bug in 'env_generator~.pd' --wip
+* bang bug in 'keycontrol~.pd'
 * Add '~' in ALL abstractions names --done
 * Add a bypass option in all modules
 * Make ADSR plot
