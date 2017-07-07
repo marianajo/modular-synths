@@ -38,9 +38,9 @@ This patch was made using Pd-Vanilla.
 
 ===REMAINING WORK===
 
-* VCO Anti-Alias Pulse wave
+* VCO Anti-Alias Pulse wave --wip
 * Messages bug  in 'formant~.pd'
-* Add '~' in ALL abstractions names
+* Add '~' in ALL abstractions names --done
 * Add a bypass option in all modules
 * Make ADSR plot
 * Organize 'theremin~.pd'
