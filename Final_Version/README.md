@@ -38,10 +38,11 @@ This patch was made using Pd-Vanilla.
 
 ===REMAINING WORK===
 
-* VCO Anti-Alias Pulse wave --wip
-* Messages bug  in 'formant~.pd'
-* noteoff bug in 'env_generator~.pd' --wip
+* VCO Anti-Alias Pulse wave --done
+* Messages bug  in 'formant~.pd' --done
+* noteoff bug in 'env_generator~.pd' --done
 * bang bug in 'keycontrol~.pd'
+* finish theremin~.pd -wip
 * Add '~' in ALL abstractions names --done
 * Add a bypass option in all modules
 * Make ADSR plot
@@ -49,5 +50,6 @@ This patch was made using Pd-Vanilla.
 * Comment the whole implementation
 * patch with examples of bugs that we had
 * *stockhausen example?*
-* Final coloring 
+* Final coloring
+* Final clearing and debugging
 * Final report
