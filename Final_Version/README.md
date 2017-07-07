@@ -34,3 +34,16 @@ The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2
 ## Dependencies
 This patch was made using Pd-Vanilla.
 - Flatgui
+
+
+===REMAINING WORK===
+* VCO Anti-Alias Pulse wave
+* Messages bug  in 'formant~.pd'
+* Add '~' in ALL abstractions names
+* Add a bypass option in all modules
+* Make ADSR plot
+* Organize 'theremin~.pd'
+* Comment the whole implementation
+* patch with examples of bugs that we had
+* Final coloring 
+* Final report
