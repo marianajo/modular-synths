@@ -37,6 +37,7 @@ This patch was made using Pd-Vanilla.
 
 
 ===REMAINING WORK===
+
 * VCO Anti-Alias Pulse wave
 * Messages bug  in 'formant~.pd'
 * Add '~' in ALL abstractions names
@@ -45,5 +46,6 @@ This patch was made using Pd-Vanilla.
 * Organize 'theremin~.pd'
 * Comment the whole implementation
 * patch with examples of bugs that we had
+* *stockhausen example?*
 * Final coloring 
 * Final report
