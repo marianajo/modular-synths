@@ -4,8 +4,8 @@
 -1 -1;
 #X msg 149 167 read -resize \$1 Coeff;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array Coeff 256 float 0;
-#X coords 0 1 255 -1 220 90 1 0 0;
+#X array Coeff 64 float 0;
+#X coords 0 1 63 -1 220 90 1 0 0;
 #X restore 441 137 graph;
 #X obj 149 189 soundfiler;
 #X floatatom 227 291 5 0 0 0 Coef_Size - -, f 5;
@@ -28,7 +28,7 @@
 #X obj 149 74 r \$0-fir-panel;
 #X text 571 52 FIR;
 #X obj 666 137 vsl 15 192 0 127 0 1 \$0-fir-gain empty gain -7 -8 0
-10 -225271 -42246 -90881 12100 1;
+10 -225271 -42246 -90881 15800 1;
 #X obj 687 132 vu 15 200 empty empty 8 -8 0 10 -66577 -1 1 0;
 #X obj 696 21 r \$0-fir-vu;
 #N canvas 224 40 429 339 Fir 0;
@@ -60,14 +60,14 @@
 #X obj 551 377 block~ 256;
 #X obj 425 406 windowing/blackman~;
 #X obj 343 482 vsl 15 128 0 127 0 1 empty \$0-fir-gain gain -7 -8 0
-10 -225271 -42246 -90881 8046 1;
+10 -225271 -42246 -90881 10506 1;
 #X floatatom 180 640 5 0 0 0 - - -, f 5;
 #X obj 128 613 iemlib/gainvu~ 300;
 #X obj 128 667 outlet~;
 #X obj 234 638 s \$0-fir-vu;
 #X obj 128 366 abs/drywet~;
 #X obj 449 85 hsl 128 25 0 1 0 0 \$0-fir-drywet empty Dry--------Wet
-3 12 0 15 -262144 -1 -1 0 1;
+3 12 0 15 -262144 -1 -1 12700 1;
 #X obj 260 342 r \$0-fir-drywet;
 #X text 142 507 based on iemlib implementation:;
 #X text 213 556 IEM KUG;
@@ -76,6 +76,8 @@
 #X text 233 544 iem.at;
 #X text 196 566 Graz \, Austria;
 #X text 148 533 Thomas Musil 2000 - 2005;
+#X obj 379 23 loadbang;
+#X msg 379 45 0;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
@@ -102,4 +104,6 @@
 #X connect 34 0 31 0;
 #X connect 34 0 28 0;
 #X connect 36 0 34 2;
+#X connect 44 0 45 0;
+#X connect 45 0 35 0;
 #X coords 0 -1 1 1 320 320 2 425 40;
