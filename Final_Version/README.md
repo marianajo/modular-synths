@@ -43,13 +43,13 @@ This patch was made using Pd-Vanilla.
 * noteoff bug in 'env_generator~.pd' --done
 * bang bug in 'keycontrol~.pd' --unable_to_solve
 * Add '~' in ALL abstractions names --done
-* Add a bypass option in all modules --wip
+* Add a On/Off toggle in all synthesis modules --done
+* Dry-Wet settings for all effects --done
 * Make ADSR plot
-* Organize 'theremin~.pd' --wip
+* Organize 'theremin~.pd' --done
 * Comment the whole implementation
 * patch with examples of bugs that we had
 * *stockhausen example?*
-* Dry-Wet settings for all effects --done
 * Final coloring
 * Final clearing and debugging
 * Final report
