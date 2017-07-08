@@ -1,4 +1,4 @@
-#N canvas 216 93 683 675 10;
+#N canvas 198 87 683 675 10;
 #X obj 373 45 hsl 128 15 0 1 0 0 empty \$0-dry_wet empty -2 -8 0 10
 -262144 -1 -1 0 1;
 #X obj 370 65 t b f;

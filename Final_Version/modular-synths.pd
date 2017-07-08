@@ -9,7 +9,6 @@
 #X text 878 -272 SYNTHESIS;
 #X text 162 81 ENVELOPE;
 #X obj 796 -256 abs/vco~;
-#X obj 803 273 abs/ringmod~;
 #X obj 27 697 unpack f f;
 #X text 681 739 comment;
 #X floatatom 27 719 10 0 0 0 - - -, f 10;
@@ -21,8 +20,9 @@
 #X obj 997 194 abs/wahwah~;
 #X obj 1159 175 abs/reverb~;
 #X obj 23 -207 abs/midi_reader~;
-#X connect 4 0 10 0;
-#X connect 11 0 13 0;
-#X connect 11 1 14 0;
-#X connect 15 0 11 0;
+#X obj 803 311 abs/ringmod~;
+#X connect 4 0 21 0;
+#X connect 10 0 12 0;
+#X connect 10 1 13 0;
+#X connect 14 0 10 0;
 #X coords 0 675 1 674 85 60 0;
