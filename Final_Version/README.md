@@ -41,9 +41,9 @@ This patch was made using Pd-Vanilla.
 * VCO Anti-Alias Pulse wave --done
 * Messages bug  in 'formant~.pd' --done
 * noteoff bug in 'env_generator~.pd' --done
-* bang bug in 'keycontrol~.pd'
+* bang bug in 'keycontrol~.pd' --unable_to_solve
 * Add '~' in ALL abstractions names --done
-* Add a bypass option in all modules
+* Add a bypass option in all modules --wip
 * Make ADSR plot
 * Organize 'theremin~.pd' --wip
 * Comment the whole implementation
