@@ -6,21 +6,18 @@
 #X obj 747 207 abs/ringmod~;
 #X text 878 -195 SYNTHESIS;
 #X obj 757 -178 abs/vco~;
-#X obj 24 312 unpack f f;
 #X text 681 816 comment;
-#X floatatom 98 309 10 0 0 0 - - -, f 10;
-#X floatatom 163 309 10 0 0 0 - - -, f 10;
-#X obj 24 -33 abs/theremin~;
-#X obj 201 -179 abs/keycontrol~;
 #X obj 1109 265 abs/master~;
 #X obj 502 -179 abs/fm~;
 #X obj 939 375 abs/wahwah~;
 #X obj 939 225 abs/reverb~;
-#X obj 55 -160 abs/midi_reader~;
 #X obj 282 344 abs/env_generator~;
 #X obj 747 366 abs/ringmod~;
-#X connect 4 0 19 0;
-#X connect 7 0 9 0;
-#X connect 7 1 10 0;
-#X connect 11 0 7 0;
+#X text 493 175 ====MODULAR SYNTH====;
+#X obj 22 -187 cnv 20 385 520 empty empty empty 20 12 0 14 -261717
+-66577 0;
+#X obj 201 -179 abs/keycontrol~;
+#X obj 55 -160 abs/midi_reader~;
+#X obj 25 -32 abs/theremin~;
+#X connect 4 0 13 0;
 #X coords 0 752 1 751 85 60 0;
