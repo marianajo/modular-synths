@@ -10,10 +10,8 @@
 #X text 226 235 Magnitude da FFT;
 #X text 244 266 Plota o espectro;
 #X text 372 135 Plota a forma de onda;
-#X obj 52 266 tabwrite~ Espectro_ID_1020;
-#X obj 139 135 tabwrite~ Forma_de_Onda_ID_1020;
 #N canvas 0 50 450 300 (subpatch) 0;
-#X array Forma_de_Onda_ID_1020 2205 float 1;
+#X array \$0-Forma_de_Onda_ID 2205 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -84,7 +82,7 @@
 #X coords 0 1.1 2204 -1.1 400 140 1 0 0;
 #X restore 45 323 graph;
 #N canvas 0 50 958 1029 (subpatch) 0;
-#X array Espectro_ID_1020 512 float 1;
+#X array \$0-Espectro_ID 512 float 1;
 #A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -114,14 +112,16 @@
 #X obj 322 72 block~ 1024;
 #X obj 53 177 windowing/hanning~;
 #X obj 52 234 cyclone/cartopol~;
-#X connect 0 0 11 0;
-#X connect 0 0 23 0;
+#X obj 52 266 tabwrite~ \$0-Espectro_ID;
+#X obj 139 135 tabwrite~ \$0-Forma_de_Onda_ID;
+#X connect 0 0 21 0;
+#X connect 0 0 24 0;
 #X connect 1 0 2 0;
-#X connect 2 0 20 0;
-#X connect 3 0 24 0;
-#X connect 3 1 24 1;
-#X connect 20 0 10 0;
-#X connect 20 0 11 0;
-#X connect 23 0 3 0;
-#X connect 24 0 10 0;
+#X connect 2 0 18 0;
+#X connect 3 0 22 0;
+#X connect 3 1 22 1;
+#X connect 18 0 23 0;
+#X connect 18 0 24 0;
+#X connect 21 0 3 0;
+#X connect 22 0 23 0;
 #X coords 0 -1 1 1 450 350 2 20 300;
