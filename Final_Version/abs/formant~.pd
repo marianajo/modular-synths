@@ -6,30 +6,30 @@
 #X obj 492 451 bp~;
 #X obj 507 378 inlet;
 #X obj 631 640 outlet~;
-#X obj 200 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 168 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 211 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 253 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 305 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 124 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 146 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 151 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 183 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 194 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 236 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 288 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 107 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 129 140 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X text 125 122 f1;
-#X text 143 122 Q1;
-#X text 179 122 f2;
-#X text 197 121 Q2;
-#X text 233 122 f3;
-#X text 250 122 Q3;
-#X text 286 122 f4;
-#X text 304 122 Q4;
+#X text 103 122 f1;
+#X text 121 122 Q1;
+#X text 147 122 f2;
+#X text 165 121 Q2;
+#X text 191 122 f3;
+#X text 208 122 Q3;
+#X text 234 122 f4;
+#X text 252 122 Q4;
 #X obj 508 294 r \$0-bp-Q1;
 #X obj 499 267 r \$0-bp-f1;
 #X msg 416 294 clear;
@@ -144,10 +144,10 @@
 #X obj 343 609 s \$0-bp-Q3;
 #X obj 417 609 s \$0-bp-Q4;
 #X obj 400 704 s \$0-bp-f4;
-#X text 197 67 FORMANTS;
-#X obj 110 379 hsl 230 20 0.0001 1 0 0 empty empty VCO_Frequency_(1.01Hz-173Hz)
+#X text 175 67 FORMANTS;
+#X obj 108 379 hsl 200 20 0.0001 1 0 0 empty empty VCO_Frequency_(1.01Hz-173Hz)
 6 9 0 12 -262144 -1 -1 0 1;
-#X obj 110 357 hsl 230 20 0 1 0 0 empty empty VCO_Amplitude 6 9 0 12
+#X obj 108 357 hsl 200 20 0 1 0 0 empty empty VCO_Amplitude 6 9 0 12
 -262144 -1 -1 0 1;
 #X obj 29 648 pack;
 #X obj 79 562 t b f;
@@ -164,18 +164,18 @@
 #X restore 43 502 pd toexp2;
 #X obj 826 384 vradio 18 1 0 2 empty \$0-formant-control empty 0 -8
 0 10 -262144 -1 -1 1;
-#X text 135 93 White Noise;
-#X text 244 93 VCO Pulse;
-#X obj 110 401 hsl 230 20 20 10000 0 0 empty empty VCO_Frequency_(20Hz_-_10Kkz)
+#X text 113 93 White Noise;
+#X text 222 93 VCO Pulse;
+#X obj 108 401 hsl 200 20 20 10000 0 0 empty empty VCO_Frequency_(20Hz_-_10Kkz)
 6 9 0 12 -262144 -1 -1 0 1;
 #X obj 31 679 s \$0-tovco;
 #X obj 951 67 r \$0-tovco;
-#X obj 206 92 hradio 18 1 0 2 \$0-formant-control empty empty 0 -8
+#X obj 184 92 hradio 18 1 0 2 \$0-formant-control empty empty 0 -8
 0 10 -262144 -1 -1 1;
 #X obj 824 434 zexy/multiplex~ 1 2;
 #X obj 1071 31 loadbang;
 #X msg 1034 69 4;
-#X obj 110 424 hsl 230 20 0 1 0 0 empty empty GAIN 6 9 0 12 -262144
+#X obj 108 424 hsl 200 20 0 1 0 0 empty empty GAIN 6 9 0 12 -262144
 -1 -1 0 1;
 #X obj 631 562 *~;
 #X obj 110 529 s \$0-form-gain;
@@ -208,22 +208,22 @@
 #X text 823 145 /i/;
 #X text 817 165 /iy/;
 #X obj 120 495 * 5;
-#X obj 330 147 vradio 15 1 0 10 \$0-formant-message empty empty 0 -8
+#X obj 278 147 vradio 15 1 0 10 \$0-formant-message empty empty 0 -8
 0 10 -262144 -1 -1 0;
 #X obj 399 13 hradio 15 1 0 10 empty \$0-formant-message empty 0 -8
 0 10 -262144 -1 -1 0;
 #X obj 432 43 route 0 1 2 3 4 5 6 7 8 9;
-#X text 344 163 /ow/;
-#X text 344 147 /oo/;
-#X text 345 179 /u/;
-#X text 343 192 /a/;
-#X text 344 206 /uh/;
-#X text 345 221 /er/;
-#X text 345 237 /ae/;
-#X text 348 251 /e/;
-#X text 346 267 /i/;
-#X text 346 282 /iy/;
-#X obj 328 319 bng 30 250 50 0 \$0-formant-clear empty clear 0 -6 0
+#X text 292 163 /ow/;
+#X text 292 147 /oo/;
+#X text 293 179 /u/;
+#X text 291 192 /a/;
+#X text 292 206 /uh/;
+#X text 293 221 /er/;
+#X text 293 237 /ae/;
+#X text 296 251 /e/;
+#X text 294 267 /i/;
+#X text 294 282 /iy/;
+#X obj 276 319 bng 30 250 50 0 \$0-formant-clear empty clear 0 -6 0
 10 -262144 -1 -1;
 #X obj 27 165 inlet;
 #X text 23 148 (f \, a);
@@ -263,7 +263,7 @@
 #X obj 994 565 loadbang;
 #X obj 994 654 s \$0-allcoeff;
 #X obj 1009 602 r \$0-formant-clear;
-#X obj 326 76 tgl 25 0 \$0-formant-onoff empty On/Off 1 13 0 7 -258113
+#X obj 284 76 tgl 25 0 \$0-formant-onoff empty On/Off 1 13 0 7 -258113
 -1 -262144 0 1;
 #X obj 540 601 zexy/multiplex~;
 #X obj 540 576 tgl 15 0 empty \$0-formant-onoff empty 17 7 0 10 -262144
@@ -272,14 +272,14 @@
 #X obj 1160 559 inlet;
 #X obj 1160 581 outlet;
 #X text 1161 538 bang;
-#X text 362 50 b;
-#X text 363 454 b;
+#X text 313 52 b;
+#X text 312 452 b;
 #X obj 24 318 loadbang;
 #X obj 818 521 loadbang;
 #X msg 818 543 440;
 #X msg 994 632 0 0.01 0 0.01 0 0.01 0 0.01;
 #X msg 24 340 0.0001;
-#X text 104 54 f/a;
+#X text 102 54 f/a;
 #X connect 0 0 74 0;
 #X connect 1 0 74 0;
 #X connect 2 0 74 0;
@@ -403,4 +403,4 @@
 #X connect 148 0 78 0;
 #X connect 149 0 135 0;
 #X connect 150 0 58 0;
-#X coords 0 -1 1 1 275 420 2 100 50;
+#X coords 0 -1 1 1 225 420 2 100 50;

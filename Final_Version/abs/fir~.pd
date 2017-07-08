@@ -5,8 +5,8 @@
 #X msg 149 167 read -resize \$1 Coeff;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array Coeff 64 float 0;
-#X coords 0 1 63 -1 220 90 1 0 0;
-#X restore 441 137 graph;
+#X coords 0 1 63 -1 190 80 1 0 0;
+#X restore 437 113 graph;
 #X obj 149 189 soundfiler;
 #X floatatom 227 291 5 0 0 0 Coef_Size - -, f 5;
 #X text 286 169 Block size;
@@ -16,20 +16,20 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-#X coords 0 64 127 -1 220 90 1 0 0;
-#X restore 441 242 graph;
+#X coords 0 64 127 -1 190 80 1 0 0;
+#X restore 437 208 graph;
 #X obj 424 488 tabwrite~ \$0-Frequency_Response;
 #X obj 676 442 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 676 471 metro 50;
-#X obj 587 85 bng 25 250 50 0 empty empty Open_Coefficient_File 27
-9 0 10 -262144 -1 -1;
+#X obj 578 72 bng 25 250 50 0 empty empty Open_Coeff -10 -7 0 8 -262144
+-1 -1;
 #X obj 755 110 s \$0-fir-panel;
 #X obj 149 74 r \$0-fir-panel;
-#X text 571 52 FIR;
-#X obj 666 137 vsl 15 192 0 127 0 1 \$0-fir-gain empty gain -7 -8 0
+#X text 532 44 FIR;
+#X obj 632 93 vsl 12 192 0 127 0 1 \$0-fir-gain empty gain -7 -8 0
 10 -225271 -42246 -90881 15800 1;
-#X obj 687 132 vu 15 200 empty empty 8 -8 0 10 -66577 -1 1 0;
+#X obj 649 88 vu 10 200 empty empty 8 -8 0 8 -66577 -1 1 0;
 #X obj 696 21 r \$0-fir-vu;
 #N canvas 224 40 429 339 Fir 0;
 #X text 44 159 based on iemlib implementation:;
@@ -55,8 +55,8 @@
 #X text 158 120 based on EP2 implementation;
 #X obj 676 401 loadbang;
 #X msg 676 423 1;
-#X text 428 41 Input;
-#X text 427 342 Output;
+#X text 427 41 Input;
+#X text 425 301 Output;
 #X obj 425 434 rfft~;
 #X obj 424 463 cyclone/cartopol~;
 #X obj 304 307 block~ 256;
@@ -68,7 +68,7 @@
 #X obj 128 667 outlet~;
 #X obj 234 638 s \$0-fir-vu;
 #X obj 128 366 abs/drywet~;
-#X obj 449 85 hsl 128 25 0 1 0 0 \$0-fir-drywet empty Dry--------Wet
+#X obj 440 71 hsl 128 25 0 1 0 0 \$0-fir-drywet empty Dry--------Wet
 3 12 0 15 -262144 -1 -1 0 1;
 #X obj 260 342 r \$0-fir-drywet;
 #X text 142 507 based on iemlib implementation:;
@@ -109,4 +109,4 @@
 #X connect 36 0 34 2;
 #X connect 44 0 45 0;
 #X connect 45 0 35 0;
-#X coords 0 -1 1 1 320 320 2 425 40;
+#X coords 0 -1 1 1 260 280 2 425 40;
