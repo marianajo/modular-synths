@@ -31,7 +31,7 @@
 10 -225271 -42246 -90881 12100 1;
 #X obj 687 132 vu 15 200 empty empty 8 -8 0 10 -66577 -1 1 0;
 #X obj 696 21 r \$0-fir-vu;
-#N canvas 495 112 864 531 Fir 1;
+#N canvas 224 40 429 339 Fir 0;
 #X text 44 159 based on iemlib implementation:;
 #X text 115 208 IEM KUG;
 #X text 99 196 musil;
@@ -59,16 +59,23 @@
 #X obj 424 463 cyclone/cartopol~;
 #X obj 551 377 block~ 256;
 #X obj 425 406 windowing/blackman~;
-#X obj 233 422 vsl 15 128 0 127 0 1 empty \$0-fir-gain gain -7 -8 0
+#X obj 343 482 vsl 15 128 0 127 0 1 empty \$0-fir-gain gain -7 -8 0
 10 -225271 -42246 -90881 8046 1;
-#X floatatom 180 580 5 0 0 0 - - -, f 5;
-#X obj 128 553 iemlib/gainvu~ 300;
-#X obj 128 607 outlet~;
-#X obj 234 578 s \$0-fir-vu;
+#X floatatom 180 640 5 0 0 0 - - -, f 5;
+#X obj 128 613 iemlib/gainvu~ 300;
+#X obj 128 667 outlet~;
+#X obj 234 638 s \$0-fir-vu;
 #X obj 128 366 abs/drywet~;
 #X obj 449 85 hsl 128 25 0 1 0 0 \$0-fir-drywet empty Dry--------Wet
 3 12 0 15 -262144 -1 -1 0 1;
 #X obj 260 342 r \$0-fir-drywet;
+#X text 142 507 based on iemlib implementation:;
+#X text 213 556 IEM KUG;
+#X text 197 544 musil;
+#X text 227 544 @;
+#X text 233 544 iem.at;
+#X text 196 566 Graz \, Austria;
+#X text 148 533 Thomas Musil 2000 - 2005;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 4 0;
