@@ -50,6 +50,7 @@ This patch was made using Pd-Vanilla.
 * Comment the whole implementation
 * patch with examples of bugs that we had
 * *stockhausen example?*
+* Dry-Wet settings for all effects --wip
 * Final coloring
 * Final clearing and debugging
 * Final report
