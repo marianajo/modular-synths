@@ -1,4 +1,4 @@
-#N canvas 0 93 1366 675 10;
+#N canvas 0 93 1280 675 10;
 #X obj 352 118 / 100;
 #X floatatom 352 98 5 0 100 0 - - -, f 5;
 #X obj 330 188 *~;
@@ -8,15 +8,15 @@
 #X obj 330 237 +~ 129;
 #X obj 330 286 hip~ 5;
 #X obj 178 242 vsl 10 128 0 100 0 0 \$0-cheb2 empty 2 2 -9 0 10 -262144
--1 -1 7500 1;
+-1 -1 0 1;
 #X obj 192 242 vsl 10 128 0 100 0 0 \$0-cheb3 empty 3 2 -9 0 10 -262144
--1 -1 5400 1;
+-1 -1 0 1;
 #X obj 208 242 vsl 10 128 0 100 0 0 \$0-cheb4 empty 4 2 -9 0 10 -262144
--1 -1 5300 1;
+-1 -1 0 1;
 #X obj 222 242 vsl 10 128 0 100 0 0 \$0-cheb5 empty 5 2 -9 0 10 -262144
--1 -1 5900 1;
+-1 -1 0 1;
 #X obj 236 242 vsl 10 128 0 100 0 0 \$0-cheb6 empty 6 2 -9 0 10 -262144
--1 -1 3100 1;
+-1 -1 0 1;
 #N canvas 432 102 862 666 polynomials 0;
 #X obj 141 304 t b b;
 #X obj 213 329 f;
@@ -487,7 +487,7 @@ them in a wavetable for use later.;
 #X floatatom 182 211 5 0 0 1 freq - -, f 5;
 #X obj 24 237 osc~;
 #X text 41 363 debug tools;
-#X obj 397 451 outlet~;
+#X obj 358 472 outlet~;
 #X obj 704 388 metro 100;
 #N canvas 0 50 450 278 (subpatch) 0;
 #X array \$0-cheb-spec 64 float 3;
@@ -501,16 +501,22 @@ them in a wavetable for use later.;
 #X obj 479 448 r \$0-cheb-fa;
 #X obj 479 470 outlet;
 #X obj 24 188 unpack;
-#X text 170 162 (f \, a);
 #X text 24 124 (f \, a);
 #X obj 854 583 inlet;
 #X obj 854 605 outlet;
-#X text 221 163 bang;
 #X text 855 566 bang;
-#X text 203 374 f \, a;
 #X text 170 374 ~;
 #X text 243 374 b;
-#X text 179 187 CHEBYCHEV;
+#X text 180 155 CHEBYCHEV;
+#X text 203 374 f/a;
+#X text 170 132 f/a;
+#X text 241 132 b;
+#X obj 198 176 tgl 25 0 \$0-cheb-onoff empty On/Off 1 13 0 7 -258113
+-1 -262144 0 1;
+#X obj 358 439 zexy/multiplex~;
+#X obj 358 418 tgl 15 0 empty \$0-cheb-onoff empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 311 438 On/Off;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 5 0;
@@ -574,7 +580,7 @@ them in a wavetable for use later.;
 #X connect 79 0 81 0;
 #X connect 79 0 87 0;
 #X connect 79 0 89 0;
-#X connect 79 0 93 0;
+#X connect 79 0 113 1;
 #X connect 82 0 94 0;
 #X connect 84 0 83 0;
 #X connect 86 0 85 0;
@@ -588,5 +594,7 @@ them in a wavetable for use later.;
 #X connect 97 0 96 0;
 #X connect 99 0 100 0;
 #X connect 101 0 90 0;
-#X connect 104 0 105 0;
-#X coords 0 -1 1 1 85 230 2 170 160;
+#X connect 103 0 104 0;
+#X connect 113 0 93 0;
+#X connect 114 0 113 0;
+#X coords 0 -1 1 1 85 260 2 170 130;

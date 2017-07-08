@@ -1,4 +1,4 @@
-#N canvas 1 22 923 752 10;
+#N canvas 1 22 1040 752 10;
 #X obj 1 2 cnv 300 300 300 \$0-c2 \$0-cc empty 20 12 0 14 -84067 -66577
 0;
 #X obj 725 195 cyclone/mousestate;
@@ -76,7 +76,7 @@
 #X msg 727 127 1;
 #X obj 698 406 spigot;
 #X obj 527 388 tgl 15 0 empty \$0-th-activate empty 17 7 0 10 -262144
--1 -1 1 1;
+-1 -1 0 1;
 #X obj 698 428 t b b;
 #X obj 762 390 key;
 #X obj 762 412 sel 32;
@@ -95,7 +95,7 @@
 #X obj 686 381 t b b;
 #X obj 601 703 outlet;
 #X obj 205 304 vradio 15 1 0 2 empty \$0-the-control empty 0 -8 0 10
--262144 -1 -1 1;
+-262144 -1 -1 0;
 #X obj 417 511 loadbang;
 #X msg 416 536 1;
 #X obj 387 156 s \$0-dur;
@@ -106,8 +106,8 @@
 #X text 227 320 Event_on (space to off);
 #X text 311 223 THEREMIN;
 #X text 317 235 CANVAS;
-#X obj 804 462 outlet;
-#X obj 802 437 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 828 485 outlet;
+#X obj 826 460 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 414 581 metro 40;
 #X obj 330 269 tgl 15 0 \$0-th-activate empty Activate -10 22 0 8 -262144
@@ -166,7 +166,7 @@
 #N canvas 887 89 408 439 event_mechanism_amp 0;
 #X obj 195 185 f;
 #X obj 227 52 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj 78 183 f;
 #X obj 78 257 t b f;
 #X msg 78 279 1;
@@ -210,7 +210,7 @@
 #N canvas 875 86 408 439 event_mechanism_freq 0;
 #X obj 195 185 f;
 #X obj 227 52 vradio 15 1 0 2 \$0-the-control empty empty 0 -8 0 10
--262144 -1 -1 1;
+-262144 -1 -1 0;
 #X obj 78 183 f;
 #X obj 78 257 t b f;
 #X msg 78 299 1;
@@ -254,10 +254,11 @@
 #X connect 22 0 1 0;
 #X restore 571 559 pd event_mechanism_freq;
 #X obj 762 487 t f f;
-#X text 824 429 bang end of event;
+#X text 847 457 bang end of event;
 #X obj 601 655 pack f f;
 #X text 647 703 (f \, a);
 #X text 254 672 (f \, a) in realtime;
+#X obj 824 433 spigot;
 #X connect 1 0 4 0;
 #X connect 1 1 2 0;
 #X connect 1 2 3 0;
@@ -285,11 +286,12 @@
 #X connect 22 0 5 0;
 #X connect 23 0 25 0;
 #X connect 24 0 23 1;
+#X connect 24 0 81 1;
 #X connect 25 0 75 1;
 #X connect 25 1 74 1;
 #X connect 26 0 27 0;
 #X connect 27 0 28 0;
-#X connect 27 0 53 0;
+#X connect 27 0 81 0;
 #X connect 28 0 76 0;
 #X connect 29 0 78 0;
 #X connect 30 0 54 0;
@@ -326,4 +328,5 @@
 #X connect 76 1 74 2;
 #X connect 78 0 33 0;
 #X connect 78 0 40 0;
+#X connect 81 0 53 0;
 #X coords 0 -1 1 1 377 340 2 0 0;

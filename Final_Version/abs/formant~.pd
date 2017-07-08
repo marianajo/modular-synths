@@ -1,11 +1,11 @@
-#N canvas -9 30 1280 752 10;
+#N canvas 0 30 1280 752 10;
 #X obj 764 451 bp~;
 #X obj 672 451 bp~;
 #X obj 580 451 bp~;
 #X obj 469 378 inlet;
 #X obj 492 451 bp~;
 #X obj 507 378 inlet;
-#X obj 631 593 outlet~;
+#X obj 631 640 outlet~;
 #X obj 200 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 253 140 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -148,7 +148,7 @@
 #X obj 110 379 hsl 230 20 0.0001 1 0 0 empty empty VCO_Frequency_(1.01Hz-173Hz)
 6 9 0 12 -262144 -1 -1 0 1;
 #X obj 110 357 hsl 230 20 0 1 0 0 empty empty VCO_Amplitude 6 9 0 12
--262144 -1 -1 8000 1;
+-262144 -1 -1 0 1;
 #X obj 29 648 pack;
 #X obj 79 562 t b f;
 #N canvas 812 217 103 130 toexp2 0;
@@ -176,7 +176,7 @@
 #X obj 1071 31 loadbang;
 #X msg 1034 69 4;
 #X obj 110 424 hsl 230 20 0 1 0 0 empty empty GAIN 6 9 0 12 -262144
--1 -1 4500 1;
+-1 -1 0 1;
 #X obj 631 562 *~;
 #X obj 110 529 s \$0-form-gain;
 #X obj 646 532 r \$0-form-gain;
@@ -265,6 +265,17 @@
 #X msg 994 632 0 0.01 0 0.01 0 0.01 0 0.01;
 #X obj 994 654 s \$0-allcoeff;
 #X obj 1009 602 r \$0-formant-clear;
+#X obj 326 76 tgl 25 0 \$0-formant-onoff empty On/Off 1 13 0 7 -258113
+-1 -262144 0 1;
+#X obj 540 601 zexy/multiplex~;
+#X obj 540 576 tgl 15 0 empty \$0-formant-onoff empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X text 559 575 On/Off;
+#X obj 1160 559 inlet;
+#X obj 1160 581 outlet;
+#X text 1161 538 bang;
+#X text 362 50 b;
+#X text 363 454 b;
 #X connect 0 0 74 0;
 #X connect 1 0 74 0;
 #X connect 2 0 74 0;
@@ -328,7 +339,7 @@
 #X connect 71 0 113 0;
 #X connect 72 0 114 1;
 #X connect 73 0 94 0;
-#X connect 74 0 6 0;
+#X connect 74 0 140 1;
 #X connect 76 0 74 1;
 #X connect 78 0 80 0;
 #X connect 79 0 81 0;
@@ -381,4 +392,7 @@
 #X connect 135 0 136 0;
 #X connect 136 0 137 0;
 #X connect 138 0 136 0;
+#X connect 140 0 6 0;
+#X connect 141 0 140 0;
+#X connect 143 0 144 0;
 #X coords 0 -1 1 1 275 420 2 100 50;
