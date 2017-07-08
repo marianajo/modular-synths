@@ -1,4 +1,4 @@
-#N canvas 79 22 956 752 10;
+#N canvas 0 22 885 752 10;
 #X obj 149 145 openpanel;
 #X obj 149 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -44,10 +44,12 @@
 #X msg 292 152 set Coeff \$1;
 #X obj 289 233 outlet~;
 #X obj 292 77 inlet;
+#X obj 318 107 block~ 256;
 #X connect 7 0 8 0;
 #X connect 8 0 10 0;
 #X connect 9 0 8 0;
 #X connect 11 0 9 0;
+#X connect 11 0 12 0;
 #X restore 194 334 pd Fir;
 #X obj 128 317 inlet~;
 #X text 158 120 based on EP2 implementation;
@@ -57,7 +59,7 @@
 #X text 427 342 Output;
 #X obj 425 434 rfft~;
 #X obj 424 463 cyclone/cartopol~;
-#X obj 551 377 block~ 256;
+#X obj 304 307 block~ 256;
 #X obj 425 406 windowing/blackman~;
 #X obj 343 482 vsl 15 128 0 127 0 1 empty \$0-fir-gain gain -7 -8 0
 10 -225271 -42246 -90881 10506 1;
@@ -67,7 +69,7 @@
 #X obj 234 638 s \$0-fir-vu;
 #X obj 128 366 abs/drywet~;
 #X obj 449 85 hsl 128 25 0 1 0 0 \$0-fir-drywet empty Dry--------Wet
-3 12 0 15 -262144 -1 -1 12700 1;
+3 12 0 15 -262144 -1 -1 0 1;
 #X obj 260 342 r \$0-fir-drywet;
 #X text 142 507 based on iemlib implementation:;
 #X text 213 556 IEM KUG;
@@ -83,6 +85,7 @@
 #X connect 2 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 18 1;
+#X connect 5 0 27 0;
 #X connect 9 0 10 0;
 #X connect 10 0 8 0;
 #X connect 11 0 12 0;
