@@ -1,4 +1,4 @@
-#N canvas 177 22 828 658 10;
+#N canvas 77 93 828 658 10;
 #X floatatom 406 435 5 0 0 0 - - -, f 5;
 #X obj 406 302 vsl 15 128 0.1 20 0 0 empty \$0-wah-q empty 0 -9 0 10
 -262144 -1 -1 0 1;
@@ -25,21 +25,21 @@
 #X text 471 533 Pierre Massat \, GuitarExtended \, 2012.s;
 #X text 148 122 WAH-WAH;
 #X obj 316 461 vcf~ 5.3;
-#X obj 117 167 hsl 100 20 0.5 4 0 0 \$0-wah-lfo empty LFO_frequency
+#X obj 125 197 hsl 100 20 0.5 4 0 0 \$0-wah-lfo empty LFO_frequency
 4 10 0 10 -262144 -1 -1 0 1;
-#X obj 117 142 hsl 100 20 0.1 20 0 0 \$0-wah-q empty Q 4 10 0 10 -262144
+#X obj 125 172 hsl 100 20 0.1 20 0 0 \$0-wah-q empty Q 4 10 0 10 -262144
 -1 -1 0 1;
 #X obj 316 57 inlet~;
-#X obj 117 193 hsl 100 20 700 6000 0 0 \$0-wah-max empty max_freq_range
+#X obj 125 223 hsl 100 20 700 6000 0 0 \$0-wah-max empty max_freq_range
 4 10 0 10 -262144 -1 -1 0 1;
-#X obj 117 242 hsl 100 20 0 1 0 0 \$0-wah-drywet empty Dry----------Wet
-4 10 0 10 -262144 -1 -1 0 1;
+#X obj 111 150 hsl 128 15 0 1 0 0 \$0-wah-drywet empty Dry--------------Wet
+4 8 0 10 -262144 -1 -1 0 1;
 #X obj 250 588 outlet~;
 #X text 101 277 signal;
 #X text 102 100 signal;
 #X text 315 40 signal;
 #X obj 250 527 drywet~;
-#X obj 117 218 hsl 100 20 0 700 0 0 \$0-wah-min empty min_freq_range
+#X obj 125 248 hsl 100 20 0 700 0 0 \$0-wah-min empty min_freq_range
 4 10 0 10 -262144 -1 -1 0 1;
 #X obj 291 92 s~ \$0-inlet;
 #X obj 240 501 r~ \$0-inlet;
