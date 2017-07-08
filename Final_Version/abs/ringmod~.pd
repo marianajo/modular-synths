@@ -14,26 +14,26 @@
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 500 119 -500 120 80 2 0 0;
-#X restore 131 169 graph;
+#X restore 131 152 graph;
 #X obj 264 21 inlet~;
 #X text 265 4 signal;
 #X text 130 100 RING MODULATION;
-#X obj 81 168 vsl 15 80 0 35 0 0 \$0-ringmod-freq-low empty empty 0
+#X obj 81 151 vsl 15 80 0 35 0 0 \$0-ringmod-freq-low empty empty 0
 -9 0 10 -262144 -1 -1 0 1;
 #X obj 245 359 outlet~;
 #X obj 312 51 hsl 128 15 0 35 0 0 empty \$0-ringmod-freq-low empty
 -2 -8 0 10 -262144 -1 -1 0 1;
-#X obj 102 168 vsl 15 80 0 10000 0 0 \$0-ringmod-freq empty empty 0
+#X obj 102 151 vsl 15 80 0 10000 0 0 \$0-ringmod-freq empty empty 0
 -9 0 10 -262144 -1 -1 0 1;
-#X text 84 188 L;
-#X text 84 198 o;
-#X text 105 187 H;
-#X text 105 197 i;
+#X text 84 171 L;
+#X text 84 181 o;
+#X text 105 170 H;
+#X text 105 180 i;
 #X text 73 102 In;
-#X text 71 260 Out;
+#X text 71 240 Out;
 #X obj 412 113 loadbang;
 #X obj 197 305 abs/drywet~;
-#X obj 98 132 hsl 128 15 0 1 0 0 \$0-ring-drywet empty Dry--------------Wet
+#X obj 98 122 hsl 128 15 0 1 0 0 \$0-ring-drywet empty Dry--------------Wet
 5 7 0 10 -262144 -1 -1 0 1;
 #X obj 329 277 r \$0-ring-drywet;
 #X obj 178 47 s~ \$0-ring-inlet;
@@ -51,4 +51,4 @@
 #X connect 21 0 11 0;
 #X connect 23 0 21 2;
 #X connect 25 0 21 0;
-#X coords 0 -1 1 1 185 175 2 70 100;
+#X coords 0 -1 1 1 185 155 2 70 100;
