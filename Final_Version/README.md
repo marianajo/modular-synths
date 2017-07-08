@@ -42,15 +42,14 @@ This patch was made using Pd-Vanilla.
 * Messages bug  in 'formant~.pd' --done
 * noteoff bug in 'env_generator~.pd' --done
 * bang bug in 'keycontrol~.pd'
-* finish theremin~.pd -wip
 * Add '~' in ALL abstractions names --done
 * Add a bypass option in all modules
 * Make ADSR plot
-* Organize 'theremin~.pd'
+* Organize 'theremin~.pd' --wip
 * Comment the whole implementation
 * patch with examples of bugs that we had
 * *stockhausen example?*
-* Dry-Wet settings for all effects --wip
+* Dry-Wet settings for all effects --done
 * Final coloring
 * Final clearing and debugging
 * Final report
