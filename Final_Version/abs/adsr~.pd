@@ -1,12 +1,12 @@
 #N canvas 1 22 1279 706 10;
 #X obj 161 129 vsl 15 88 0.1 3000 0 0 \$0-adsr-decay empty D 4 -9 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 3400 1;
 #X obj 193 129 vsl 15 88 0.1 1 1 0 \$0-adsr-sustain empty S 4 -9 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 1100 1;
 #X obj 225 129 vsl 15 88 0.2 5000 0 0 \$0-adsr-release empty R 4 -9
-0 10 -262144 -1 -1 0 1;
+0 10 -262144 -1 -1 600 1;
 #X obj 132 129 vsl 15 88 0.2 3000 0 0 \$0-adsr-attack empty A 4 -9
-0 10 -262144 -1 -1 0 1;
+0 10 -262144 -1 -1 500 1;
 #X obj 26 62 / 1000;
 #X floatatom 123 222 4 0 0 0 - - -, f 4;
 #X obj 23 206 / 1000;
@@ -76,17 +76,16 @@ to seconds for the GUI;
 #X obj 798 614 pack;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-adsr 40 float 1;
-#A 0 0 0.669999 0.970608 0.80419 0.665508 0.49909 0.332671 0.193989
-0.172274 0.172274 0.172274 0.172274 0.172274 0.172274 0.172274 0.172274
-0.172274 0.172274 0.172274 0.172274 0.172274 0.172274 0.172274 0.172274
-0.172274 0.172274 0.172274 0.172274 0.172274 0.172274 0.172274 0.172274
-0.172274 0.172274 0.136102 0.0953988 0.0465546 0.00585113 0 0;
+#A 0 0.882844 0.821951 0.661127 0.468138 0.307315 0.133794 0.133794
+0.133794 0.133794 0.133794 0.133794 0.133794 0.133794 0.133794 0.133794
+0.133794 0.133794 0.133794 0.133794 0.133794 0.133794 0.133794 0.133794
+0.133794 0.133794 0.133794 0.133794 0.133794 0.133794 0.133794 0.133794
+0.133794 0.133794 0.133794 0.133794 0.133794 0.118712 0 0 0;
 #X coords 0 1 39 0 120 120 1 0 0;
 #X restore 251 108 graph;
 #X floatatom 85 551 5 0 0 0 - - -, f 5;
 #X floatatom 168 508 5 0 0 0 - - -, f 5;
 #X floatatom 28 507 5 0 0 0 - - -, f 5;
-#X obj 601 475 print;
 #N canvas 168 22 790 752 plot_adsr_graph 0;
 #X obj 604 23 r \$0-adsr-release;
 #X obj 308 23 r \$0-adsr-sustain;
@@ -223,7 +222,7 @@ to seconds for the GUI;
 #X restore 309 357 pd plot_adsr_graph;
 #X obj 309 315 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 353 91 tgl 15 0 empty empty Plot -32 8 0 8 -262144 -1 -1 0 1
+#X obj 353 91 tgl 15 0 empty empty Plot -32 8 0 8 -262144 -1 -1 1 1
 ;
 #X obj 319 295 metro 800;
 #X text 351 234 f/a;
@@ -232,14 +231,14 @@ to seconds for the GUI;
 #X text 236 75 f/a;
 #X text 363 75 b;
 #X obj 152 81 tgl 22 0 \$0-adsr-onoff empty On/Off 1 10 0 6 -258113
--1 -262144 0 1;
+-1 -262144 1 1;
 #X obj 184 81 tgl 22 0 \$0-adsr-bypass empty Bypass 1 10 0 6 -4034
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 430 635 zexy/multiplex~;
 #X obj 430 605 tgl 15 0 empty \$0-adsr-onoff empty 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 673 475 tgl 15 0 empty \$0-adsr-bypass empty 17 7 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 516 577 abs/drywet~;
 #X obj 663 541 -;
 #X msg 663 522 1;
@@ -254,11 +253,10 @@ to seconds for the GUI;
 #X connect 17 0 36 0;
 #X connect 17 0 69 0;
 #X connect 18 0 19 1;
-#X connect 19 0 87 1;
+#X connect 19 0 86 1;
 #X connect 20 1 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 18 0;
-#X connect 22 0 72 0;
 #X connect 23 0 30 0;
 #X connect 24 0 3 0;
 #X connect 24 0 0 0;
@@ -288,7 +286,7 @@ to seconds for the GUI;
 #X connect 50 2 11 0;
 #X connect 51 0 50 0;
 #X connect 53 0 19 0;
-#X connect 53 0 87 0;
+#X connect 53 0 86 0;
 #X connect 54 0 20 0;
 #X connect 55 0 56 0;
 #X connect 56 0 57 0;
@@ -298,16 +296,16 @@ to seconds for the GUI;
 #X connect 65 0 67 0;
 #X connect 66 0 67 1;
 #X connect 67 0 64 0;
-#X connect 74 0 73 0;
-#X connect 75 0 76 0;
-#X connect 76 0 74 0;
-#X connect 84 0 43 0;
-#X connect 85 0 84 0;
-#X connect 86 0 91 0;
-#X connect 87 0 84 1;
-#X connect 88 0 90 0;
-#X connect 89 0 88 0;
-#X connect 90 0 87 2;
-#X connect 91 0 89 0;
-#X connect 91 1 88 1;
+#X connect 73 0 72 0;
+#X connect 74 0 75 0;
+#X connect 75 0 73 0;
+#X connect 83 0 43 0;
+#X connect 84 0 83 0;
+#X connect 85 0 90 0;
+#X connect 86 0 83 1;
+#X connect 87 0 89 0;
+#X connect 88 0 87 0;
+#X connect 89 0 86 2;
+#X connect 90 0 88 0;
+#X connect 90 1 87 1;
 #X coords 0 -1 1 1 255 176 2 120 75;

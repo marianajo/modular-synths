@@ -1,2 +1,2 @@
 #N canvas -1 22 1280 752 10;
-#X obj 12 7 modular-synths;
+#X obj 10 -5 modular-synths;
