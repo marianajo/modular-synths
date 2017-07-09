@@ -1,31 +1,29 @@
 #N canvas 1 22 1269 752 10;
-#X text 878 -195 SYNTHESIS;
-#X text 681 816 comment;
-#X obj 22 -187 cnv 20 385 520 empty empty empty 20 12 0 14 -261717
--66577 0;
-#X obj 201 -179 abs/keycontrol~;
-#X obj 55 -160 abs/midi_reader~;
-#X obj 25 -32 abs/theremin~;
-#X obj 410 -187 cnv 15 835 375 empty empty empty 20 12 0 14 -114225
--66577 0;
-#X obj 1014 -179 abs/formant~;
-#X obj 414 -179 abs/chebyshev~;
-#X obj 757 -178 abs/vco~;
-#X obj 502 -179 abs/fm~;
-#X text 413 166 ====MODULAR SYNTH====;
-#X obj 22 339 cnv 15 455 190 empty empty empty 20 12 0 14 -260124 -66577
+#X obj 22 13 cnv 20 385 520 empty empty empty 20 12 0 14 -261717 -66577
 0;
-#X obj 24 345 abs/adsr~;
-#X obj 282 344 abs/env_generator~;
-#X obj 482 200 cnv 15 615 330 empty empty empty 20 12 0 14 -117376
+#X obj 201 21 abs/keycontrol~;
+#X obj 55 40 abs/midi_reader~;
+#X obj 25 168 abs/theremin~;
+#X obj 410 13 cnv 15 835 375 empty empty empty 20 12 0 14 -114225 -66577
+0;
+#X obj 1014 21 abs/formant~;
+#X obj 414 21 abs/chebyshev~;
+#X obj 757 22 abs/vco~;
+#X obj 502 21 abs/fm~;
+#X text 413 366 ====MODULAR SYNTH====;
+#X obj 22 539 cnv 15 455 190 empty empty empty 20 12 0 14 -260124 -66577
+0;
+#X obj 24 545 abs/adsr~;
+#X obj 282 544 abs/env_generator~;
+#X obj 482 400 cnv 15 615 330 empty empty empty 20 12 0 14 -117376
 -66577 0;
-#X obj 489 241 abs/fir~;
-#X obj 757 207 abs/ringmod~;
-#X obj 949 375 abs/wahwah~;
-#X obj 949 225 abs/reverb~;
-#X obj 757 366 abs/ringmod~;
-#X obj 1108 199 cnv 15 135 330 empty empty empty 20 12 0 14 -165621
+#X obj 489 441 abs/fir~;
+#X obj 757 407 abs/ringmod~;
+#X obj 949 575 abs/wahwah~;
+#X obj 949 425 abs/reverb~;
+#X obj 757 566 abs/ringmod~;
+#X obj 1108 399 cnv 15 135 330 empty empty empty 20 12 0 14 -165621
 -66577 0;
-#X obj 1130 262 abs/master~;
-#X connect 17 0 20 0;
+#X obj 1130 462 abs/master~;
+#X connect 15 0 18 0;
 #X coords 0 752 1 751 85 60 0;
