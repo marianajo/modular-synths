@@ -1,9 +1,9 @@
 #N canvas 1 22 1040 752 10;
 #X obj 1 2 cnv 300 300 300 \$0-c2 \$0-cc empty 20 12 0 14 -84067 -66577
 0;
-#X obj 725 195 cyclone/mousestate;
-#X floatatom 752 246 5 0 0 0 - - -, f 5;
-#X floatatom 833 246 5 0 0 0 - - -, f 5;
+#X obj 751 114 cyclone/mousestate;
+#X floatatom 778 165 5 0 0 0 - - -, f 5;
+#X floatatom 859 165 5 0 0 0 - - -, f 5;
 #X floatatom 686 284 5 0 0 0 - - -, f 5;
 #X obj 686 303 sel 1;
 #X obj 686 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -17,8 +17,8 @@
 -1 -1;
 #X msg 490 15 0;
 #X obj 529 62 del 100;
-#X floatatom 833 313 5 0 0 0 - - -, f 5;
-#X floatatom 752 313 5 0 0 0 - - -, f 5;
+#X floatatom 859 232 5 0 0 0 - - -, f 5;
+#X floatatom 778 232 5 0 0 0 - - -, f 5;
 #N canvas 534 62 466 413 amplitud 0;
 #X obj 125 53 inlet;
 #X obj 165 125 - 300;
@@ -41,7 +41,7 @@
 #X connect 6 0 4 0;
 #X connect 7 0 9 0;
 #X connect 9 0 8 0;
-#X restore 752 330 pd amplitud;
+#X restore 778 249 pd amplitud;
 #X floatatom 102 309 15 0 0 3 Amplitude - -, f 15;
 #N canvas 395 130 447 377 frequ 0;
 #X obj 139 69 inlet;
@@ -67,14 +67,14 @@
 #X connect 8 0 2 0;
 #X connect 9 0 6 0;
 #X connect 10 0 7 0;
-#X restore 826 330 pd frequ;
+#X restore 852 249 pd frequ;
 #X floatatom 8 309 15 0 0 3 Frequency - -, f 15;
-#X obj 725 119 loadbang;
+#X obj 751 38 loadbang;
 #X obj 698 406 spigot;
-#X obj 527 388 tgl 15 0 empty \$0-th-activate empty 17 7 0 10 -262144
+#X obj 532 390 tgl 15 0 empty \$0-th-activate empty 17 7 0 10 -262144
 -1 -1 0 1;
 #X obj 698 428 t b b;
-#X obj 762 390 key;
+#X obj 763 392 key;
 #X obj 762 412 sel 32;
 #X msg 762 461 0;
 #X obj 571 624 snapshot~;
@@ -94,9 +94,9 @@
 -262144 -1 -1 0;
 #X obj 417 511 loadbang;
 #X msg 416 536 1;
-#X obj 387 156 s \$0-dur;
-#X obj 389 103 loadbang;
-#X msg 389 125 1000;
+#X obj 387 186 s \$0-dur;
+#X obj 389 133 loadbang;
+#X msg 389 155 1000;
 #X floatatom 305 142 5 0 0 3 rampDuration - -, f 5;
 #X text 225 303 Event_off;
 #X text 227 320 Event_on (space to off);
@@ -108,7 +108,7 @@
 #X obj 414 581 metro 40;
 #X obj 330 269 tgl 15 0 \$0-th-activate empty Activate -10 22 0 8 -262144
 -1 -1 0 1;
-#X text 573 29 Calibrate on/off mechanism;
+#X text 538 111 Calibrate on/off mechanism;
 #X obj 488 167 s \$0-calib;
 #X obj 526 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -118,12 +118,12 @@
 -262144 -1 -1 0;
 #X text 322 46 calibrar;
 #X text 535 309 calibrate;
-#X obj 722 350 s \$0-th-amplitud;
-#X obj 826 350 s \$0-th-frequ;
+#X obj 748 269 s \$0-th-amplitud;
+#X obj 852 269 s \$0-th-frequ;
 #X text 547 389 Activate;
 #X obj 6 354 r \$0-th-frequ;
 #X obj 102 353 r \$0-th-amplitud;
-#N canvas 735 116 248 297 calibration 0;
+#N canvas 589 110 545 292 calibration 0;
 #X obj 60 160 f;
 #X floatatom 60 182 5 0 0 0 - - -, f 5;
 #X obj 134 154 f;
@@ -139,6 +139,9 @@
 #X obj 48 229 outlet;
 #X obj 122 229 outlet;
 #X text 180 77 bang;
+#X text 185 130 When the Switch 'calibrar' is on \, the next click
+will re-calculate the cold inlet in the [- ] objects \, making the
+new calibration;
 #X connect 0 0 1 0;
 #X connect 1 0 5 1;
 #X connect 2 0 3 0;
@@ -154,12 +157,12 @@
 #X connect 10 1 0 1;
 #X connect 11 0 4 0;
 #X connect 11 1 2 1;
-#X restore 752 268 pd calibration;
+#X restore 778 187 pd calibration;
 #X obj 122 392 s \$0-th-amp-val;
 #X obj 720 535 r \$0-th-amp-val;
 #X obj 6 391 s \$0-th-freq-val;
 #X obj 571 534 r \$0-th-freq-val;
-#N canvas 887 89 408 439 event_mechanism_amp 0;
+#N canvas 426 63 572 416 event_mechanism_amp 0;
 #X obj 195 185 f;
 #X obj 227 52 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
@@ -183,6 +186,7 @@
 #X floatatom 78 205 5 0 0 0 - - -, f 5;
 #X obj 275 22 r \$0-ev_on-amp;
 #X obj 78 320 s \$0-ev_on-amp;
+#X text 236 297 <-- Smooth transition between two pais of f/a;
 #X connect 0 0 6 0;
 #X connect 1 0 8 1;
 #X connect 2 0 3 0;
@@ -255,7 +259,14 @@
 #X text 647 703 (f \, a);
 #X text 254 672 (f \, a) in realtime;
 #X obj 824 433 spigot;
-#X msg 725 145 poll;
+#X msg 751 64 poll;
+#X obj 687 660 tgl 15 0 empty \$0-th-activate empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 602 681 zexy/multiplex;
+#X text 804 387 <- the Space bar is responsible for ending events;
+#X text 547 249 put in the right units \, Log-scale -->;
+#X text 396 201 ^ change the duration/rate of change in f/a;
+#X text 704 678 On/Off Switch;
 #X connect 1 0 4 0;
 #X connect 1 1 2 0;
 #X connect 1 2 3 0;
@@ -321,7 +332,9 @@
 #X connect 73 0 72 2;
 #X connect 73 1 71 2;
 #X connect 75 0 30 0;
-#X connect 75 0 37 0;
+#X connect 75 0 81 1;
 #X connect 78 0 50 0;
 #X connect 79 0 1 0;
+#X connect 80 0 81 2;
+#X connect 81 0 37 0;
 #X coords 0 -1 1 1 377 340 2 0 0;

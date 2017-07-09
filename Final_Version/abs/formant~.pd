@@ -225,8 +225,8 @@
 #X text 294 272 /iy/;
 #X obj 282 104 bng 30 250 50 0 \$0-formant-clear empty clear 0 -6 0
 10 -262144 -1 -1;
-#X obj 27 165 inlet;
-#X text 23 148 (f \, a);
+#X obj 27 105 inlet;
+#X text 23 88 (f \, a);
 #X obj 27 194 unpack;
 #X msg 1071 53 1;
 #X obj 951 94 abs/vco~;
@@ -280,6 +280,11 @@
 #X msg 994 632 0 0.01 0 0.01 0 0.01 0 0.01;
 #X msg 24 340 0.0001;
 #X text 102 54 f/a;
+#X obj 27 127 t l l;
+#X obj 27 160 s \$0-for-fa;
+#X obj 1039 501 r \$0-for-fa;
+#X text 1047 487 (f \, a);
+#X obj 1039 523 outlet;
 #X connect 0 0 74 0;
 #X connect 1 0 74 0;
 #X connect 2 0 74 0;
@@ -361,7 +366,7 @@
 #X connect 97 8 127 0;
 #X connect 97 9 130 0;
 #X connect 97 10 131 0;
-#X connect 109 0 111 0;
+#X connect 109 0 152 0;
 #X connect 111 0 58 0;
 #X connect 111 0 66 0;
 #X connect 112 0 113 2;
@@ -403,4 +408,7 @@
 #X connect 148 0 78 0;
 #X connect 149 0 135 0;
 #X connect 150 0 58 0;
+#X connect 152 0 111 0;
+#X connect 152 1 153 0;
+#X connect 154 0 156 0;
 #X coords 0 -1 1 1 225 360 2 100 50;
