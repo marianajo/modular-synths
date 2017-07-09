@@ -45,11 +45,11 @@ This patch was made using Pd-Vanilla.
 * Add '~' in ALL abstractions names --done
 * Add a On/Off toggle in all synthesis modules --done
 * Dry-Wet settings for all effects --done
-* Make ADSR plot
+* Make ADSR plot --done
 * Organize 'theremin~.pd' --done
-* Comment the whole implementation
-* patch with examples of bugs that we had
-* *stockhausen example?*
-* Final coloring
-* Final clearing and debugging
-* Final report
+* **Comment the whole implementation --wip**
+* patch with examples of bugs that we had --not_enough_time
+* *stockhausen example?* --not_enough_time
+* Final coloring --done
+* Final clearing and debugging --done
+* **Final report --wip**
