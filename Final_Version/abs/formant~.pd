@@ -6,21 +6,21 @@
 #X obj 492 451 bp~;
 #X obj 507 378 inlet;
 #X obj 631 640 outlet~;
-#X obj 168 130 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 168 130 vsl 13 170 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 211 130 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 211 130 vsl 13 170 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 253 130 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 253 130 vsl 13 170 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 124 130 vsl 13 200 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 124 130 vsl 13 170 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 151 130 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 151 130 vsl 13 170 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 194 130 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 194 130 vsl 13 170 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 236 130 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 236 130 vsl 13 170 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 107 130 vsl 13 200 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 107 130 vsl 13 170 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X text 103 112 f1;
 #X text 121 112 Q1;
@@ -145,9 +145,9 @@
 #X obj 417 609 s \$0-bp-Q4;
 #X obj 400 704 s \$0-bp-f4;
 #X text 175 57 FORMANTS;
-#X obj 108 369 hsl 200 20 0.0001 1 0 0 empty empty VCO_Frequency_(1.01Hz-173Hz)
+#X obj 108 329 hsl 200 20 0.0001 1 0 0 empty empty VCO_Frequency_(1.01Hz-173Hz)
 6 9 0 12 -262144 -1 -1 0 1;
-#X obj 108 347 hsl 200 20 0 1 0 0 empty empty VCO_Amplitude 6 9 0 12
+#X obj 108 307 hsl 200 20 0 1 0 0 empty empty VCO_Amplitude 6 9 0 12
 -262144 -1 -1 0 1;
 #X obj 29 648 pack;
 #X obj 79 562 t b f;
@@ -166,7 +166,7 @@
 0 10 -262144 -1 -1 1;
 #X text 113 83 White Noise;
 #X text 222 83 VCO Pulse;
-#X obj 108 391 hsl 200 20 20 10000 0 0 empty empty VCO_Frequency_(20Hz_-_10Kkz)
+#X obj 108 351 hsl 200 20 20 10000 0 0 empty empty VCO_Frequency_(20Hz_-_10Kkz)
 6 9 0 12 -262144 -1 -1 0 1;
 #X obj 31 679 s \$0-tovco;
 #X obj 951 67 r \$0-tovco;
@@ -175,7 +175,7 @@
 #X obj 824 434 zexy/multiplex~ 1 2;
 #X obj 1071 31 loadbang;
 #X msg 1034 69 4;
-#X obj 108 414 hsl 200 20 0 1 0 0 empty empty GAIN 6 9 0 12 -262144
+#X obj 108 374 hsl 200 20 0 1 0 0 empty empty GAIN 6 9 0 12 -262144
 -1 -1 0 1;
 #X obj 631 562 *~;
 #X obj 110 529 s \$0-form-gain;
@@ -223,7 +223,7 @@
 #X text 296 241 /e/;
 #X text 294 257 /i/;
 #X text 294 272 /iy/;
-#X obj 276 309 bng 30 250 50 0 \$0-formant-clear empty clear 0 -6 0
+#X obj 282 104 bng 30 250 50 0 \$0-formant-clear empty clear 0 -6 0
 10 -262144 -1 -1;
 #X obj 27 165 inlet;
 #X text 23 148 (f \, a);
@@ -273,7 +273,7 @@
 #X obj 1160 581 outlet;
 #X text 1161 538 bang;
 #X text 313 52 b;
-#X text 312 435 b;
+#X text 312 395 b;
 #X obj 24 318 loadbang;
 #X obj 818 521 loadbang;
 #X msg 818 543 440;
@@ -403,4 +403,4 @@
 #X connect 148 0 78 0;
 #X connect 149 0 135 0;
 #X connect 150 0 58 0;
-#X coords 0 -1 1 1 225 400 2 100 50;
+#X coords 0 -1 1 1 225 360 2 100 50;
