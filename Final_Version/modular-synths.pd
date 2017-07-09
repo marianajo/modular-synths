@@ -14,7 +14,7 @@
 #X obj 22 539 cnv 15 455 190 empty empty empty 20 12 0 14 -260124 -66577
 0;
 #X obj 24 545 abs/adsr~;
-#X obj 282 544 abs/env_generator~;
+#X obj 281 546 abs/env_generator~;
 #X obj 482 400 cnv 15 615 330 empty empty empty 20 12 0 14 -117376
 -66577 0;
 #X obj 489 441 abs/fir~;
@@ -25,5 +25,39 @@
 #X obj 1108 399 cnv 15 135 330 empty empty empty 20 12 0 14 -165621
 -66577 0;
 #X obj 1130 462 abs/master~;
+#X connect 1 0 6 0;
+#X connect 1 0 8 0;
+#X connect 1 0 7 0;
+#X connect 1 0 5 0;
+#X connect 1 1 6 1;
+#X connect 1 1 8 1;
+#X connect 1 1 7 3;
+#X connect 1 1 5 3;
+#X connect 2 0 6 0;
+#X connect 2 0 8 0;
+#X connect 2 0 7 0;
+#X connect 2 0 5 0;
+#X connect 2 1 6 1;
+#X connect 2 1 8 1;
+#X connect 2 1 7 3;
+#X connect 2 1 5 3;
+#X connect 3 0 6 0;
+#X connect 3 0 8 0;
+#X connect 3 0 7 0;
+#X connect 3 0 5 0;
+#X connect 3 1 6 1;
+#X connect 3 1 8 1;
+#X connect 3 1 7 3;
+#X connect 3 1 5 3;
+#X connect 6 0 11 0;
+#X connect 6 1 11 1;
+#X connect 6 2 11 2;
+#X connect 7 0 11 0;
+#X connect 7 1 11 1;
+#X connect 7 2 11 2;
+#X connect 8 0 11 0;
+#X connect 8 1 11 1;
+#X connect 8 2 11 2;
 #X connect 15 0 18 0;
+#X connect 17 0 16 0;
 #X coords 0 752 1 751 85 60 0;

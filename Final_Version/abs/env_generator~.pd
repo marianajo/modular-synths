@@ -1,4 +1,4 @@
-#N canvas 540 71 613 481 10;
+#N canvas 540 71 652 679 10;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-env_generator 100 float 3;
 #A 0 0.516667 0.516667 0.516667 0.0833333 0.0833333 0.575 0.583333
@@ -15,29 +15,29 @@
 0.224994 0.224994 0.21666 0.21666 0.199993 0.199993 0.199993 0.199993
 0.199993 0.19166 0.19166 0.19166 0.19166;
 #X coords 0 1 100 0 180 120 1 0 0;
-#X restore 35 103 graph;
+#X restore 35 106 graph;
 #X msg 426 44 99 4000;
 #X obj 426 146 line;
 #X obj 239 36 inlet~;
 #X text 238 22 signal;
 #X obj 497 241 inlet;
 #X text 497 223 bang;
-#X obj 240 407 *~;
+#X obj 260 407 *~;
 #X obj 426 201 f;
 #X obj 460 390 line~;
-#X obj 240 429 outlet~;
+#X obj 280 641 outlet~;
 #X obj 426 179 tabread \$0-env_generator;
 #X obj 295 22 inlet;
 #X obj 295 64 unpack f f;
 #X obj 295 86 bang;
-#X obj 24 401 osc~ 220;
-#X obj 27 431 dac~;
+#X obj 24 371 osc~ 220;
+#X obj 27 401 dac~;
 #X obj 461 145 sel 99;
-#X text 17 381 debug tools;
+#X text 17 351 debug tools;
 #X obj 322 429 outlet;
 #X obj 295 44 t l l;
 #X text 30 68 ~;
-#X text 31 227 ~;
+#X text 31 230 ~;
 #X text 290 3 (f \, a);
 #X obj 451 98 t l b;
 #X msg 451 71 0;
@@ -46,15 +46,31 @@
 #X obj 497 267 t b b;
 #X msg 524 302 0 2;
 #X msg 460 343 \$1 5;
-#X text 195 226 f/a;
+#X text 195 229 f/a;
 #X text 195 69 f/a;
 #X text 52 70 GRAPHIC ENV GENERATOR;
+#X obj 152 84 tgl 22 0 \$0-env-onoff empty On/Off 1 10 0 6 -258113
+-1 -262144 0 1;
+#X obj 184 84 tgl 22 0 \$0-env-bypass empty Bypass 1 10 0 6 -4034 -1
+-1 0 1;
+#X obj 151 609 zexy/multiplex~;
+#X obj 151 579 tgl 15 0 empty \$0-env-onoff empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 394 449 tgl 15 0 empty \$0-env-bypass empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 237 551 abs/drywet~;
+#X obj 384 515 -;
+#X msg 384 496 1;
+#X floatatom 384 537 5 0 0 0 - - -, f 5;
+#X obj 386 477 t b f;
+#X text 412 448 Bypass;
 #X connect 1 0 2 0;
 #X connect 2 0 11 0;
 #X connect 2 0 17 0;
 #X connect 3 0 7 0;
+#X connect 3 0 39 0;
 #X connect 5 0 28 0;
-#X connect 7 0 10 0;
+#X connect 7 0 39 1;
 #X connect 8 0 26 0;
 #X connect 9 0 7 1;
 #X connect 11 0 8 0;
@@ -62,7 +78,6 @@
 #X connect 13 0 14 0;
 #X connect 13 0 26 1;
 #X connect 14 0 1 0;
-#X connect 15 0 7 0;
 #X connect 17 0 25 0;
 #X connect 20 0 13 0;
 #X connect 20 1 19 0;
@@ -74,4 +89,13 @@
 #X connect 28 1 29 0;
 #X connect 29 0 9 0;
 #X connect 30 0 9 0;
-#X coords 0 -1 1 1 190 177 2 30 67;
+#X connect 36 0 10 0;
+#X connect 37 0 36 0;
+#X connect 38 0 43 0;
+#X connect 39 0 36 1;
+#X connect 40 0 42 0;
+#X connect 41 0 40 0;
+#X connect 42 0 39 2;
+#X connect 43 0 41 0;
+#X connect 43 1 40 1;
+#X coords 0 -1 1 1 190 180 2 30 67;
