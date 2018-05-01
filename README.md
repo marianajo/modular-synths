@@ -6,31 +6,54 @@ By: [Mariana Jó](http://github.com/marianajo) and [Paulo Vitor de Itaboraí](ht
 
 Professor: Marcelo Queiroz
 
+![modular-synth](./modular-synth.png)
+
 ## Modules
-The synthesizer uses twelve modules: (2)control, (4)synthesis, (4)effects and (2)envelopes.
+The synthesizer uses thirteen modules: 3 for control, 4 for synthesis, 4 for effects and 2 for envelopes.
 
 ### Control
-* MIDI file reader [marianajo] -DONE
-* Theremin Canvas [itaborala] -not_done
+* MIDI file reader
+* Theremin Canvas
+* Keymapper
 
 ### Synthesis
-* VCO [itaborala] -DONE
-* Formants [itaborala] -DONE
-* FM [marianajo] -DONE
-* Chebychev Synthesis [marianajo] -DONE
+* VCO
+* Formants
+* FM
+* Chebychev Synthesis
 
 ### Effects
-* FIR [itaborala] -DONE
-* Granulator [itaborala] -not_done
-* Reverb [marianajo] -DONE
-* Ring Modulation [marianajo] -DONE
-* ~Parametric Equalizer [marianajo]~ -A DISCUTIR
+* FIR
+* Reverb
+* Ring Modulation
+* Wah-wah
 
 ### Envelopes
-* ADSR [marianajo] -WIP (falta fazer grafico)
-* Graphic Envelope Generator [marianajo] -DONE
-* ~Linear Random Envelope [itaborala] -WIP~
+* ADSR
+* Graphic Envelope Generator
+
+
+
+
+## Project structure
+
+├── MAIN.pd - *The main patch. It's an interface to operate the synth with a cleaner look. It's just a way to have `modular-synths.pd` without wires*
+
+├── modular-synths.pd - *The synthesizer itself, conecting all the modules*
+
+├── README.md - *These instructions*
+
+├── abs - *Directory with all the abstractions used by the patch*
+
+│   ├── FIR_Files - *WAV files used by FIR effect*
+
+│   ├── MIDI_Files - *MIDI files used as examples for the MIDI reader*
+
+│   ├── README.md - *Instructions on how to use the abstractions [incomplete]*
+
+
 
 ## Dependencies
+
 This patch was made using Pd-Vanilla.
 - Flatgui
